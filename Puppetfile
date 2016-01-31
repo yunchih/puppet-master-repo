@@ -6,12 +6,15 @@ mod 'stahnma/epel'
 
 mod 'example42/iptables'
 
-mod 'mbilker/pacman'
-
 mod 'example42/puppi'
-
-mod 'TracyWebTech/pip'
 
 mod 'saz/ssh'
 
 mod 'puppetlabs/stdlib'
+
+mod 'pip'
+  :git => 'https://github.com/TracyWebTech/puppet-pip'
+
+mod 'mbilker'
+  :git => 'https://github.com/mbilker/puppet-pacman'
+
