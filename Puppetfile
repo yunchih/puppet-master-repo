@@ -12,9 +12,9 @@ mod 'saz/ssh'
 
 mod 'puppetlabs/stdlib'
 
-mod 'pip'
+mod 'pip',
   :git => 'https://github.com/TracyWebTech/puppet-pip'
 
-mod 'mbilker'
+mod 'mbilker',
   :git => 'https://github.com/mbilker/puppet-pacman'
 
