@@ -8,10 +8,6 @@ class ws::fail2ban {
 		ensure	=> 'present'
 	}
 
-	service { "fail2ban.service":
-		ensure	=> 'running'
-	}
-
 	file { '/etc/fail2ban':
 		ensure	=> directory,
 		recurse	=> remote,
@@ -21,4 +17,7 @@ class ws::fail2ban {
 		source	=> 'puppet:///wslab/217-base/etc/fail2ban'
 	}
 
+	service { "fail2ban.service":
+		ensure	=> 'running'
+	}
 }

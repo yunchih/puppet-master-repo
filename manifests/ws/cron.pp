@@ -9,10 +9,6 @@ class ws::cron {
 		ensure	=> 'present'
 	}
 
-	service { $cron_package:
-		ensure	=> 'running'
-	}
-
 	$crons = [ '/etc/cron.d/', '/etc/cron.daily/', '/etc/cron.hourly']
 
 	$crons.each |$cron| { 
@@ -24,6 +20,10 @@ class ws::cron {
 			mode	=> '644',
 			source	=> "puppet:///wslab/217-base${cron}"
 		}
+	}
+
+	service { $cron_package:
+		ensure	=> 'running'
 	}
 
 }

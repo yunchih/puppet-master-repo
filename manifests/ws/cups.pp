@@ -30,4 +30,7 @@ class ws::cups {
 		}
 	}
 
+	service { "org.cups.cupsd.service":
+		ensure	=> 'running'
+	}
 }

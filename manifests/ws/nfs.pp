@@ -12,10 +12,6 @@ class ws::nfs {
 		ensure	=> 'present'
 	}
 
-	service { $nfs_service:
-		ensure	=> 'running'
-	}
-
 	file { '/etc/auto.master.d':
 		ensure	=> directory,
 		owner	=> 'root',
@@ -40,6 +36,11 @@ class ws::nfs {
 			source	=> "puppet:///wslab/217-base${cron}"
 		}
 	}
+
+	service { $nfs_service:
+		ensure	=> 'running'
+	}
+
 
 }
 

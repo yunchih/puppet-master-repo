@@ -8,10 +8,6 @@ class ws::snmp {
 		ensure	=> 'present'
 	}
 
-	service { "snmpd":
-		ensure	=> 'running'
-	}
-
 	file { '/etc/snmp':
 		ensure	=> directory,
 		owner	=> 'root',
@@ -25,5 +21,9 @@ class ws::snmp {
 		group	=> 'root',
 		mode	=> '0600',
 		source	=> 'puppet:///wslab/217-base/etc/snmp/snmpd.conf'
+	}
+
+	service { "snmpd":
+		ensure	=> 'running'
 	}
 }

@@ -15,6 +15,6 @@ mod 'puppetlabs/stdlib'
 mod 'pip',
   :git => 'https://github.com/TracyWebTech/puppet-pip'
 
-mod 'mbilker',
+mod 'pacman',
   :git => 'https://github.com/mbilker/puppet-pacman'
 
