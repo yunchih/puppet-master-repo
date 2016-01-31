@@ -1,0 +1,4 @@
+#! /bin/bash 
+
+for p in $(cat /etc/puppetlabs/code/environments/testing/hieradata/wspkg/Archlinux.yaml  | sed 's/^.*"\(.*\)"$/\1/g' | tr  '\n' ' '); do ssh ws1 pacman -Ss $p > /dev/null; echo "$p ---> $?"; done
+

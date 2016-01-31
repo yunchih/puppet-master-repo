@@ -1,0 +1,5 @@
+
+wspkg::pip:
+  - pip
+  - django
+  - scipy

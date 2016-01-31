@@ -1,0 +1,4 @@
+
+wspkg::gems:
+  - sinatra
+  - jekyll

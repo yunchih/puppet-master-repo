@@ -1,0 +1,10 @@
+classes:
+  - iptables
+
+
+
+iptables::rules:
+  NFLOG_TCP:
+    rule:  "-t filter -I OUTPUT -p tcp -j NFLOG --nflog-group 5 "
+  NFLOG_UDP:
+    rule:  "-t filter -I OUTPUT -p udp -j NFLOG --nflog-group 5 "
