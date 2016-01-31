@@ -1,17 +1,17 @@
 forge 'forge.puppetlabs.com'
 
-mod 'puppetlabs/puppetlabs-concat'
+mod 'puppetlabs/concat'
 
-mod 'stahnma/puppet-module-epel'
+mod 'stahnma/epel'
 
-mod 'example42/puppet-iptables'
+mod 'example42/iptables'
 
-mod 'mbilker/puppet-pacman'
+mod 'mbilker/pacman'
 
 mod 'example42/puppi'
 
-mod 'TracyWebTech/puppet-pip'
+mod 'TracyWebTech/pip'
 
-mod 'saz/puppet-ssh'
+mod 'saz/ssh'
 
-mod 'puppetlabs/puppetlabs-stdlib'
+mod 'puppetlabs/stdlib'
