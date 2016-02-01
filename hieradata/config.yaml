@@ -1,0 +1,3 @@
+ws::pacman::mirror:
+    name: 'ws217-mirror'
+    server: 'file:///srv/repo/$repo/os/$arch'
