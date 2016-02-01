@@ -1,5 +1,3 @@
----
-wspkg::map:
   acl:                      "acl lib32-acl"
   attr:                     "attr lib32-attr"
   bc:                       "bc"
@@ -121,7 +119,7 @@ wspkg::map:
   bmeps:                    ""
   xgraph:                   ""
   hugs:                     "hugs"
-  haskell_platform:         "ghc haskell-async  haskell-attoparsec  haskell-case-insensitive  haskell-exceptions  haskell-hashable  haskell-src-exts  haskell-html  haskell-hunit  haskell-mtl  haskell-network  haskell-old-locale  haskell-old-time  haskell-parallel  haskell-parsec  haskell-primitive  haskell-quickcheck  haskell-random  haskell-regex-base  haskell-regex-compat   haskell-regex-posix  haskell-scientific  haskell-split   haskell-statevar  haskell-stm  haskell-syb  haskell-text haskell-text-binary  haskell-tf-random  haskell-transformers-base  haskell-transformers-compat  haskell-unordered-containers  haskell-vector  haskell-zlib  alex  cabal-install  haddock haskell-haddock-library  happy   haskell-hscolour"
+  haskell_platform:         "ghc haskell-async  haskell-attoparsec  haskell-case-insensitive  haskell-exceptions  haskell-hashable  haskell-src-exts  haskell-html  haskell-hunit  haskell-mtl  haskell-network  haskell-old-locale  haskell-old-time  haskell-parallel  haskell-parsec  haskell-primitive  haskell-quickcheck  haskell-random  haskell-regex-base  haskell-regex-compat   haskell-regex-posix  haskell-scientific  haskell-split   haskell-statevar  haskell-stm  haskell-syb  haskell-text haskell-text-binary  haskell-tf-random  haskell-transformers-base  haskell-transformers-compat  haskell-unordered-containers  haskell-vector  haskell-zlib  alex  cabal-install  haddock haskell-haddock-library  happy   haskell-hscolour haskell-gluraw haskell-glut haskell-http haskell-network-uri haskell-objectname haskell-opengl haskell-openglraw"
   haskell_opengl:           "haskell-statevar"
   kde_meta_pkg:             "plasma-meta"
   kde_gtk_config:           "kde-gtk-config"
