@@ -10,8 +10,8 @@ node default {
     include ws::cups
     include ws::snmp
     include ws::files
+    include ws::pkg
 
-#   include ws::pkg
 #   include ws::iptables
 #   include ws::gem
 #   include ws::pip
