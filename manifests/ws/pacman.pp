@@ -14,7 +14,7 @@ class ws::pacman {
 
 
 	    $mirror = hiera("ws::pacman::mirror")
-        pacman::repo { mirror['name']
+        pacman::repo { mirror['name']:
             server => mirror['server'],
             order  => 50,
         }

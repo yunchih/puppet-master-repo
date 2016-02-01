@@ -1,3 +1,5 @@
+---
+wspkg::map:
   acl:                      "acl lib32-acl nfs4-acl-tools"
   attr:                     "attr lib32-attr"
   bc:                       "bc"
