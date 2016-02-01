@@ -1,3 +1,5 @@
+---
+wspkg::map: 
   acl:                      "acl lib32-acl"
   attr:                     "attr lib32-attr"
   bc:                       "bc"
