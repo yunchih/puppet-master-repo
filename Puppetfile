@@ -1,6 +1,6 @@
 forge 'forge.puppetlabs.com'
 
-mod 'puppetlabs/concat'
+mod 'puppetlabs/concat', '1.2.5'
 
 mod 'stahnma/epel'
 
