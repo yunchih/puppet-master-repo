@@ -16,8 +16,8 @@ class ws::cups {
 		ensure	=> directory,
 		recurse	=> true,
 		purge	=> false,
-		uid		=> '0',
-		gid		=> '0',
+		owner		=> '0',
+		group		=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/cups'
 	}

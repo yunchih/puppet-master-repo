@@ -11,8 +11,8 @@ class ws::fail2ban {
 #	file { '/etc/fail2ban':
 #	    ensure	=> directory,
 #	    recurse	=> remote,
-#       uid		=> '0',
-#   	gid		=> '0',
+#       owner		=> '0',
+#   	group		=> '0',
 #		mode	=> '0644',
 #		source	=> 'puppet:///wslab/217-base/etc/fail2ban'
 #   }
