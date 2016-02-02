@@ -15,8 +15,8 @@ class ws::ldap {
 	file { '/etc/openldap':
 		ensure	=> directory,
 		recurse	=> remote,
-		owner	=> 'root',
-		group	=> 'root',
+		uid 	=> '0',
+		gid 	=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/ldap'
 	}
@@ -25,8 +25,8 @@ class ws::ldap {
 	$ldap_files.each |$file| { 
 		file { $file:
 			ensure	=> file,
-			owner	=> 'root',
-			group	=> 'root',
+            uid 	=> '0',
+            gid 	=> '0',
 			mode	=> '644',
 			source	=> "puppet:///wslab/217-base${file}"
 		}

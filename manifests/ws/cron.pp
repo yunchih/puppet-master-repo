@@ -15,8 +15,8 @@ class ws::cron {
 		file { $cron:
 			ensure	=> directory,
 			recurse	=> remote,
-			owner	=> 'root',
-			group	=> 'root',
+            uid 	=> '0',
+            gid 	=> '0',
 			mode	=> '644',
 			source	=> "puppet:///wslab/217-base${cron}"
 		}
