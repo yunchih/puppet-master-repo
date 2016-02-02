@@ -14,8 +14,8 @@ class ws::nfs {
 
 	file { '/etc/auto.master.d':
 		ensure	=> directory,
-		owner		=> '0',
-		group		=> '0',
+		owner	=> '0',
+		group	=> '0',
 		mode	=> '644',
 	}
 
@@ -30,10 +30,11 @@ class ws::nfs {
 	$autos.each |$auto| { 
 		file { $auto:
 			ensure	=> file,
-			owner		=> '0',
-			group		=> '0',
+            notify  => Service[$nfs_service],
+			owner	=> '0',
+			group	=> '0',
 			mode	=> '644',
-			source	=> "puppet:///wslab/217-base${cron}"
+			source	=> "puppet:///wslab/217-base${auto}"
 		}
 	}
 
