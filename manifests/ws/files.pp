@@ -5,8 +5,8 @@ class ws::files {
 	file { '/root':
 		ensure	=> directory,
 		recurse	=> remote,
-		owner	=> 'root',
-		group	=> 'root',
+		uid		=> '0',
+		gid		=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/root'
 	}
@@ -23,8 +23,8 @@ class ws::files {
 	file { '/usr':
 		ensure	=> directory,
 		recurse	=> remote,
-		owner	=> 'root',
-		group	=> 'root',
+		uid	=> '0',
+		gid	=> '0',
 		source	=> 'puppet:///wslab/217-base/usr'
 	}
 	
@@ -32,8 +32,8 @@ class ws::files {
 	file { '/etc/ssl':
 		ensure	=> directory,
 		recurse	=> remote,
-		owner	=> 'root',
-		group	=> 'root',
+		uid	=> '0',
+		gid	=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/ssl'
 	}
