@@ -16,7 +16,8 @@ class ws::snmp {
 	}
 
 	file { '/etc/snmp/snmpd.conf':
-		ensure	=> file,
+		ensure	    => file,
+        notify      => Service["snmpd"],
 		owner		=> '0',
 		group		=> '0',
 		mode	=> '0600',

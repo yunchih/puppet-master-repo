@@ -11,6 +11,8 @@ class ws::cups {
 	package { $packages:
 		ensure	=> 'present'
 	}
+    
+    $cups_service = "org.cups.cupsd.service"
 
 	file { '/etc/cups':
 		ensure	=> directory,
@@ -26,11 +28,12 @@ class ws::cups {
 	$cups_secrets.each |$file| { 
 		file { $file:
 			ensure	=> file,
+            notify  => Service[$cups_service],
 			mode	=> '600',
 		}
 	}
 
-	service { "org.cups.cupsd.service":
+	service { $cups_service:
 		ensure	=> 'running'
 	}
 }
