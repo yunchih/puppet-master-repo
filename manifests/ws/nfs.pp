@@ -9,7 +9,7 @@ class ws::nfs {
 		"FreeBSD"	=> ['nfsclient']
 	}
 	package { $nfs_package:
-		ensure	=> 'present'
+		ensure	=> 'latest'
 	}
 
 	file { '/etc/auto.master.d':

@@ -10,7 +10,9 @@ node default {
     include ws::cups
     include ws::snmp
     include ws::files
-    include ws::pkg
+    include ws::tmp2
+    include ws::ipsec
+    #include ws::pkg
 
 #   include ws::iptables
 #   include ws::gem
@@ -18,7 +20,7 @@ node default {
 
 }
 
-node /^war\d+\.csie\.ntu\.edu\.tw/ {
+node /^linux\d+\.csie\.ntu\.edu\.tw/ {
 
 }
 
