@@ -1,3 +1,4 @@
 ws::pacman::mirror:
     name: 'wsarch'
     server: 'http://repo.csie.ntu.edu.tw/archrepo'
+    sig_level: 'Never'
