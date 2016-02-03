@@ -244,7 +244,7 @@ wspkg::map:
   python_gdata:             "python2-gdata"
   python_curl:              "python2-pycurl python-pycurl"
   python_ldap:              "python2-ldap"
-  python_smbpasswd:         ""
+  python_smbpasswd:         "python-smbpasswd python2-smbpasswd"
   python_sphinx:            "python-sphinx python2-sphinx"
   python_scikits_learn:     "python-scikit-learn python2-scikit-learn"
   python_igraph:            "python-igraph python2-igraph"
