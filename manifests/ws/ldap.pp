@@ -7,6 +7,9 @@ class ws::ldap {
 		"Archlinux"	=> ['openldap', 'nss-pam-ldapd'],
 		"FreeBSD"	=> ['openldap-client','nss-pam-ldapd']
 	}
+	$ldap_service = $::operatingsystem ? {
+		default	=> ['nslcd'],
+	}
 
 	package { $ldap_package:
 		ensure	=> 'present'
@@ -25,11 +28,16 @@ class ws::ldap {
 	$ldap_files.each |$file| { 
 		file { $file:
 			ensure	=> file,
+            notify  => Service[$ldap_service],
 			owner		=> '0',
 			group		=> '0',
 			mode	=> '644',
 			source	=> "puppet:///wslab/217-base${file}"
 		}
+	}
+
+	service { $ldap_service:
+		ensure	=> 'running'
 	}
 
 }

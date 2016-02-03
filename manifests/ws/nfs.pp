@@ -20,21 +20,21 @@ class ws::nfs {
 	}
 
 	$autos = [ 
-		'/etc/auto.master.d/backup.autofs', 
-		'/etc/auto.master.d/ntucsp.autofs', 
-		'/etc/auto.master',
-		'/etc/auto.nfs',
-		'/etc/auto.backup'
+		'auto.master.d/backup.autofs', 
+		'auto.master.d/ntucsp.autofs', 
+		'auto.master',
+		'auto.nfs',
+		'auto.backup'
 	]
 
 	$autos.each |$auto| { 
-		file { $auto:
+		file { '/etc/autofs/$auto:
 			ensure	=> file,
             notify  => Service[$nfs_service],
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',
-			source	=> "puppet:///wslab/217-base${auto}"
+			source	=> "puppet:///wslab/217-base/etc/${auto}"
 		}
 	}
 
