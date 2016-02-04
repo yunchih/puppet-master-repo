@@ -11,7 +11,7 @@ class ws::ipsec {
 	}
 
 	$agent = $trusted['certname']
-	file { '/etc/ipsec-tools.conf':
+	file { '/etc/ipsec.conf':
 		ensure	=> file,
 		owner 	=> '0',
 		group 	=> '0',
