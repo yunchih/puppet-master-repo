@@ -11,12 +11,12 @@ class ws::ipsec {
 	}
 
 	$agent = $trusted['certname']
-	file { '/etc/ipsec.conf':
+	file { '/etc/ipsec-tools.conf':
 		ensure	=> file,
 		owner 	=> '0',
 		group 	=> '0',
 		mode	=> '0400',
-		source	=> "puppet:///wslab/217-base/ipsec/${agent}/ipsec.conf"
+		source	=> "puppet:///wslab/217-base/ipsec/${agent}/ipsec-tools.conf"
 	}
 
 	service { "ipsec":
