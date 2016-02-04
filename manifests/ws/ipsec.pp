@@ -13,8 +13,8 @@ class ws::ipsec {
 	$agent = $trusted['certname']
 	file { '/etc/ipsec.conf':
 		ensure	=> file,
-		uid 	=> '0',
-		gid 	=> '0',
+		owner 	=> '0',
+		group 	=> '0',
 		mode	=> '0400',
 		source	=> "puppet:///wslab/217-base/ipsec/${agent}/ipsec.conf"
 	}
