@@ -1,7 +1,5 @@
-#hiera_include('classes')
-
 node default {
-    include ws::ssh # FixMe   Root login enabled during testing
+    include ws::ssh 
     include ws::pacman
     include ws::cron
     include ws::nfs
@@ -12,7 +10,7 @@ node default {
     include ws::files
     include ws::tmp2
     include ws::ipsec
-    #include ws::pkg
+    include ws::pkg
 
 #   include ws::iptables
 #   include ws::gem
@@ -20,10 +18,3 @@ node default {
 
 }
 
-node /^linux\d+\.csie\.ntu\.edu\.tw/ {
-
-}
-
-node /^peace\d+\.csie\.ntu\.edu\.tw/ {
-
-}
