@@ -1,9 +1,9 @@
 class ws::ssh {
-	class { 'ssh':
-		server_options => {
-			'PermitRootLogin' => 'yes',
-			'PasswordAuthentication' => 'yes'
-		}
-	}
+    package { 'openssh':
+        ensure => 'present'
+    }
 	
+	service { 'sshd:
+		ensure	=> 'running'
+	}
 }
