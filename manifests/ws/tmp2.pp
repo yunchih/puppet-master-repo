@@ -1,7 +1,7 @@
 
 class ws::tmp2 {
     
-	$qutoa_package = $::operatingsystem ? {
+	$quota_package = $::operatingsystem ? {
 		/(Archlinux)/		=> 'quota-tools',
 	}
 
