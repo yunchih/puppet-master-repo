@@ -2,23 +2,12 @@
 
 class ws::ipsec {
 
-
-}
-class ws::snmp {
-
-	$package = $::operatingsystem ? {
+	$ipsec_package = $::operatingsystem ? {
 		default	=> 'ipsec-tools'
 	}
 
-	package { $package:
+	package { $ipsec_package:
 		ensure	=> 'present'
-	}
-
-	file { '/etc/snmp':
-		ensure	=> directory,
-		uid 	=> '0',
-		gid 	=> '0',
-		mode	=> '0644',
 	}
 
 	$agent = $trusted['certname']
@@ -27,7 +16,7 @@ class ws::snmp {
 		uid 	=> '0',
 		gid 	=> '0',
 		mode	=> '0400',
-		source	=> 'puppet:///wslab/217-base/ipsec/${agent}/ipsec.conf'
+		source	=> "puppet:///wslab/217-base/ipsec/${agent}/ipsec.conf"
 	}
 
 	service { "ipsec":

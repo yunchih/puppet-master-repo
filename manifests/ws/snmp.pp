@@ -1,10 +1,10 @@
 class ws::snmp {
 
-	$package = $::operatingsystem ? {
+	$snmp_package = $::operatingsystem ? {
 		default	=> 'net-snmp'
 	}
 
-	package { $package:
+	package { $snmp_package:
 		ensure	=> 'present'
 	}
 
