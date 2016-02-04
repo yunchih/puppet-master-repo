@@ -12,7 +12,7 @@ class ws::nfs {
 		ensure	=> 'latest'
 	}
 
-	file { '/etc/auto.master.d':
+	file { [ '/etc/autofs','/etc/autofs/auto.master.d']:
 		ensure	=> directory,
 		owner	=> '0',
 		group	=> '0',
