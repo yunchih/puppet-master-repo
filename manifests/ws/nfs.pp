@@ -28,7 +28,7 @@ class ws::nfs {
 	]
 
 	$autos.each |$auto| { 
-		file { '/etc/autofs/$auto:
+		file { '/etc/autofs/$auto':
 			ensure	=> file,
             notify  => Service[$nfs_service],
 			owner	=> '0',
