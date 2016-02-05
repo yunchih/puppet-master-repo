@@ -1,3 +1,4 @@
+
 node default {
     include ws::ssh 
     include ws::pacman
@@ -7,9 +8,11 @@ node default {
     include ws::fail2ban
     include ws::cups
     include ws::snmp
-    include ws::files
     include ws::tmp2
     include ws::ipsec
+    include ws::sudo
+    include ws::createhome
+    include ws::files
     include ws::pkg
 
 #   include ws::iptables

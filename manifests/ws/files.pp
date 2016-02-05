@@ -1,6 +1,23 @@
 
 class ws::files {
 
+	# prevent putting '/usr/bin/lp*' before Pacman installs cups
+	require ws::cups  
+
+	$diverts = ['/usr/bin/lp', '/usr/bin/lpr', '/usr/bin/chsh', '/usr/bin/passwd', '/usr/bin/lpstat']
+
+	$diverts.each |$file| { 
+		$orig = "${file}.orig"
+		exec { "keep ${file}":
+			path	=> "/usr/bin:/usr/sbin:/bin",
+			command => "/bin/cp ${file} ${orig} -r",
+			onlyif	=> [
+				"sh -c '! test -f ${orig}'",
+				"sh -c 'test -f ${file}'"
+			],
+		}
+	}
+
 	## /root 
 	file { '/root':
 		ensure	=> directory,
@@ -17,8 +34,6 @@ class ws::files {
 		source	=> 'puppet:///wslab/217-base/root/wsmon'
 	}
 
-	# prevent putting '/usr/bin/lp*' before Pacman installs cups
-	require ws::cups  
 	## /usr 
 	file { '/usr':
 		ensure	=> directory,

@@ -12,14 +12,15 @@ class ws::cups {
 		ensure	=> 'present'
 	}
     
-    $cups_service = "org.cups.cupsd.service"
+
+    	$cups_service = "org.cups.cupsd.service"
 
 	file { '/etc/cups':
 		ensure	=> directory,
 		recurse	=> true,
 		purge	=> false,
-		owner		=> '0',
-		group		=> '0',
+		owner	=> '0',
+		group	=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/cups'
 	}
@@ -28,7 +29,7 @@ class ws::cups {
 	$cups_secrets.each |$file| { 
 		file { $file:
 			ensure	=> file,
-            notify  => Service[$cups_service],
+            		notify  => Service[$cups_service],
 			mode	=> '600',
 		}
 	}

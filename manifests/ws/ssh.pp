@@ -1,9 +1,9 @@
 class ws::ssh {
     package { 'openssh':
-        ensure => 'present'
+        ensure => 'latest'
     }
 	
-	service { 'sshd:
+	service { 'sshd':
 		ensure	=> 'running'
 	}
 }

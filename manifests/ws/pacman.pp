@@ -13,12 +13,18 @@ class ws::pacman {
 		}
 
 
-        $mirror = hiera("ws::pacman::mirror")
-        pacman::repo { $mirror['name']:
-            server      => $mirror['server'],
-            sig_level   => $mirror['sig_level'],
-            order       => 50,
-        }
+		$mirror = hiera("ws::pacman::mirror")
+		pacman::repo { $mirror['name']:
+		    server      => $mirror['server'],
+		    sig_level   => $mirror['sig_level'],
+		    order       => 50,
+		}
+
+		file { '/etc/pacman.d/mirrorlist':
+			ensure	=> file,
+			source	=> "puppet:///wslab/217-base/etc/pacman.d/mirrorlist"
+		}
+		
 
 
 	}
