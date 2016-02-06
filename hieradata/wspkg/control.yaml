@@ -29,6 +29,7 @@ wspkg::pkgs:
  - whois
  - ksh
  - tcsh
+ - zsh
  - acpi
  - cpufreq
  - cups
@@ -336,3 +337,5 @@ wspkg::pkgs:
  - enlightenment
  - xephyr
  - lxde
+ - session_manager
+ - htop
