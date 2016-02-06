@@ -11,6 +11,14 @@ class ws::pkg {
 	$agent = $trusted['certname']
 	notice( "Packages installed to node `${osfamily}::${agent}`:" )
 	$pkgs_all.each |$pkg| { notice( $pkg ) }
+	
+	$unwanted_pkgs = hiera("wspkg::purgelist")
+	#$unwanted_pkgs.each |$pkg| { 
+	#	notice( "Purging $pkg" ) 
+	#	package { $pkg:
+	#		ensure	=> 'absent'
+	#	}
+	#}
 
 	ensure_packages( $pkgs_all )
 
