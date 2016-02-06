@@ -2,11 +2,11 @@
 class ws::files {
 
 	# prevent putting '/usr/bin/lp*' before Pacman installs cups
-	require ws::cups  
+	require ws::cups
 
 	$diverts = ['/usr/bin/lp', '/usr/bin/lpr', '/usr/bin/chsh', '/usr/bin/passwd', '/usr/bin/lpstat']
 
-	$diverts.each |$file| { 
+	$diverts.each |$file| {
 		$orig = "${file}.orig"
 		exec { "keep ${file}":
 			path	=> "/usr/bin:/usr/sbin:/bin",
@@ -18,12 +18,12 @@ class ws::files {
 		}
 	}
 
-	## /root 
+	## /root
 	file { '/root':
 		ensure	=> directory,
 		recurse	=> remote,
-		owner		=> '0',
-		group		=> '0',
+		owner	=> '0',
+		group	=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/root'
 	}
@@ -34,7 +34,7 @@ class ws::files {
 		source	=> 'puppet:///wslab/217-base/root/wsmon'
 	}
 
-	## /usr 
+	## /usr
 	file { '/usr':
 		ensure	=> directory,
 		recurse	=> remote,
@@ -42,8 +42,8 @@ class ws::files {
 		group	=> '0',
 		source	=> 'puppet:///wslab/217-base/usr'
 	}
-	
-	## SSL 
+
+	## SSL
 	file { '/etc/ssl':
 		ensure	=> directory,
 		recurse	=> remote,
@@ -52,5 +52,22 @@ class ws::files {
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/ssl'
 	}
+
+	### /etc/$directories
+	#file { ['/etc/limit.d']:
+	#	ensure	=> directory,
+	#	owner	=> '0',
+	#	group	=> '0',
+	#	mode	=> '0644',
+	#}
+
+	#file { ['/etc/motd', '/etc/limit.d/wslab.conf']:
+	#file { '/etc/motd':
+	#	ensure	=> file,
+	#	owner	=> '0',
+	#	group	=> '0',
+	#	mode	=> '0644',
+	#	source	=> "puppet:///wslab/217-base${file}"
+	#}
 
 }
