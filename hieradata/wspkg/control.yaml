@@ -67,7 +67,7 @@ wspkg::pkgs:
  - eclipse
  - jikes
  - biojava
- - ncbi_toolkit
+# - ncbi_toolkit	## Building: dependency `gcc` version not fulfilled
  - mono
  - julia
  - android_tools
@@ -125,7 +125,7 @@ wspkg::pkgs:
  - xgraph
  - hugs
  - haskell_platform
- - haskell_opengl
+# - haskell_opengl # package `haskell-openglraw` out of date, consequently, `haskell-opengl` cannot pass dependency check
  - kde_meta_pkg
  - kde_gtk_config
  - adwaita_qt
@@ -187,7 +187,7 @@ wspkg::pkgs:
  - stunnel
  - vncviewer
  - ns2
- - ns3
+# - ns3			## Installation: conflict file: /usr/lib64
  - bsdftpd_ssl
  - omnitty
  - trafshow
@@ -204,7 +204,7 @@ wspkg::pkgs:
  - perl_json
  - perl_libwww
  - perl_array_intspan
- - perl_bioperl
+# - perl_bioperl  	## Building: Mal-formed PKGBUILD file
  - perl_dbi
  - perl_mail_sender
  - perl_set_intspan
@@ -322,10 +322,10 @@ wspkg::pkgs:
  - pclock
  - windowmaker
  - wmmemload
- - wmtop
- - wmcalclock
+# - wmtop 		## Building: link error
+# - wmcalclock  	## Building: Validity check fail
  - wmtimer
- - wmcliphist
+# - wmcliphist  	## Building: Source repo return 404
  - temperature_app
  - asbutton
  - desktop_base
