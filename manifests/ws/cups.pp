@@ -1,8 +1,8 @@
 
 
 class ws::cups {
-	
-	
+
+
 	$packages = $::operatingsystem ? {
 		"Archlinux"	=> ['cups', 'ghostscript', 'gsfonts'],
 		"FreeBSD"	=> ['cups']
@@ -11,26 +11,33 @@ class ws::cups {
 	package { $packages:
 		ensure	=> 'present'
 	}
-    
 
-    	$cups_service = "org.cups.cupsd.service"
+
+	$cups_service = "org.cups.cupsd.service"
 
 	file { '/etc/cups':
 		ensure	=> directory,
-		recurse	=> true,
-		purge	=> false,
+		recurse	=> remote,
 		owner	=> '0',
-		group	=> '0',
+		group	=> 'lp',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/cups'
 	}
-	
-	$cups_secrets = ['/etc/cups/classes.conf', '/etc/cups/cupsd.conf', '/etc/cups/printers.conf']
-	$cups_secrets.each |$file| { 
+	file { '/etc/cups/ppd':
+		ensure	=> directory,
+		recurse	=> remote,
+		owner	=> '0',
+		group	=> 'lp',
+		mode	=> '0640',
+		source	=> 'puppet:///wslab/217-base/etc/cups/ppd'
+	}
+
+	$cups_secrets = ['/etc/cups/classes.conf', '/etc/cups/printers.conf']
+	$cups_secrets.each |$file| {
 		file { $file:
 			ensure	=> file,
-            		notify  => Service[$cups_service],
-			mode	=> '600',
+			notify  => Service[$cups_service],
+			mode	=> '0600',
 		}
 	}
 
