@@ -28,6 +28,14 @@ class ws::files {
 		source	=> 'puppet:///wslab/217-base/root'
 	}
 
+	user { 'wsmon':
+		ensure	=> 'present',
+	}
+
+	group { 'robot':
+		ensure	=> 'present',
+	}
+
 	$wsmon_directories = [
 		'/root/wsmon',
 		'/root/wsmon/tmp2mon'
