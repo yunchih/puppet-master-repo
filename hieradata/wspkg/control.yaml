@@ -1,6 +1,7 @@
 ---
 
 wspkg::pkgs:
+## Standard
  - acl
  - attr
  - bc
@@ -24,12 +25,20 @@ wspkg::pkgs:
  - strace
  - telnet
  - time
+ - wget
+ - sudo
  - usb
  - wamerican
  - whois
+ - lsof
+ - m4
+ - mime-support
+## Shell
+ - bash
  - ksh
  - tcsh
  - zsh
+## Admin
  - acpi
  - cpufreq
  - cups
@@ -46,8 +55,11 @@ wspkg::pkgs:
  - sshit
  - fdisk
  - gdisk
+## Database
  - mysql_client
  - pymongo
+ - sqlite
+## Develop
  - ant
  - clang
  - gcc
@@ -67,6 +79,30 @@ wspkg::pkgs:
  - eclipse
  - jikes
  - biojava
+ - autotool
+ - bison
+ - ccache
+ - cmake
+ - cvs
+ - ddd
+ - f2c
+ - flex
+ - gperf
+ - gprolog
+ - libtool
+ - nasm
+ - scala
+ - scons
+ - valgrind
+ - expect
+ - lisp
+ - doxygen
+ - ocaml
+ - bzr
+ - mercurial
+ - intltool
+ - ltrace
+ - mpich
 # - ncbi_toolkit	## Building: dependency `gcc` version not fulfilled
  - mono
  - julia
@@ -74,6 +110,7 @@ wspkg::pkgs:
  - llvm
  - opencl
  - pocl
+## Doc
  - libc_doc
  - make_doc
  - manpages
@@ -84,10 +121,16 @@ wspkg::pkgs:
  - tcl_doc
  - tk_doc
  - gcc_doc
+## Editor
  - ctags
  - emacs
  - libreoffice
  - vim_gtk
+ - joe
+ - nano
+## Electronics
+ - iverilog
+## Font
  - arphic
  - baekmuk
  - cjkunifonts
@@ -105,6 +148,7 @@ wspkg::pkgs:
  - noto
  - sourcesanspro
  - sourcecodepro
+## Gnome
  - gdm
  - gnome_user_docs
  - gtk2_engines
@@ -119,18 +163,50 @@ wspkg::pkgs:
  - gnome_screenshot
  - gtk2_themes
  - gtk3_themes
+ - alacarte
+ - evince
+ - file-roller
+ - gnome-backgrounds
+ - gnome-calculator
+ - gnome-keyring
+ - gnome-nettool
+ - seahorse
+ - xdg-user-dirs
+ - zenity
+ - devhelp
+ - epiphany
+ - eog
+ - eog-plugins
+ - gedit
+ - ghex
+ - gnome-terminal
+ - gnome-tweak-tool
+ - gnome-system-monitor
+ - gucharmap
+ - nautilus
+ - vinagre
+## Graphics
  - imagemagick
  - jpeg
  - bmeps
  - xgraph
+ - gimp
+ - graphviz
+ - xloadimage
+## Haskell
  - hugs
  - haskell_platform
 # - haskell_opengl # package `haskell-openglraw` out of date, consequently, `haskell-opengl` cannot pass dependency check
+## Interpreter
+ - gawk
+ - swig
+## KDE
  - kde_meta_pkg
  - kde_gtk_config
  - adwaita_qt
  - qt4_qtconfig
  - qt5_qtct
+## Library
  - libc_dev
  - libevent_dev
  - fftw_dev
@@ -161,17 +237,28 @@ wspkg::pkgs:
  - zmq_dev
  - libxml2_dev
  - libdb_cxx_dev
- - clisp
+## Lua
  - lua51
  - lua52
  - lua53
+## Machine Learning
+ - weka
  - libsvm
  - liblinear
  - libopenblas
+## Mail
  - mailx
  - vm
+ - alpine
+ - fetchmail
+ - mpack
+ - mutt
+ - tin
+ - metamail
+## Math
+ - gnuplot
  - gsl
- - octave_dev
+ - octave
  - qhull
  - r_base
  - sympy
@@ -180,14 +267,38 @@ wspkg::pkgs:
  - gnupg
  - kernel_package
  - xsltproc
+ - poppler-data
+ - screen
+ - tmux
  - protobuf
  - linuxtool
+## Networking
  - denyhosts
  - mtr
  - stunnel
  - vncviewer
  - ns2
 # - ns3			## Installation: conflict file: /usr/lib64
+ - filezilla
+ - iftop
+ - irssi
+ - lftp
+ - ncftp
+ - nmap
+ - oidentd
+ - rsync
+ - tcpdump
+ - curl
+ - aria2
+ - mosh
+ - lrzsz
+ - pidgin
+ - rdesktop
+ - rrdtool
+ - tcptraceroute
+ - urlview
+ - x11vnc
+ - ldapvi
  - bsdftpd_ssl
  - omnitty
  - trafshow
@@ -196,6 +307,7 @@ wspkg::pkgs:
  - gnutls_cli
  - pcmanx
  - loudmouth
+## Perl
  - perl_bdb
  - perl_data_serializer
  - perl_dbd_mysql
@@ -217,8 +329,10 @@ wspkg::pkgs:
  - perl_www_robot
  - perl_xml_sax_expat
  - perl_switch
+## PHP
  - php_cli
  - php_mysql
+## Python
  - ipython
  - pypy
  - python_pip
@@ -258,20 +372,43 @@ wspkg::pkgs:
  - python_pandas
  - python_pyquery
  - python_nltk
+## Ruby
  - ruby
  - ruby_bundler
  - ruby_mysql
  - ruby_rake
  - ruby_rails
+## Science
  - blast2
  - blitz
+## Sound
  - alsa
+ - audacity
+## Tex
+ - bibtool
+ - latex2html
+ - ipe
+ - transfig
  - auctex
  - latex_cjk
  - biber
  - texlive
  - bg5ps
  - hyperlatex
+## Text
+ - a2ps
+ - dict
+ - gv
+ - mpage
+ - poppler-utils
+ - psutils
+ - recode
+ - xpdf
+ - html2ps
+ - zh-autoconvert
+ - pstotext
+ - wv
+ - asciidoc
  - aspell_en
  - gs_cjk_resource
  - spell
@@ -281,6 +418,42 @@ wspkg::pkgs:
  - xpdf_zh_fonts
  - markdown
  - pandoc
+## Utilities
+ - geeqie
+ - pv
+ - rar
+ - tree
+ - unrar
+ - unzip
+ - xdg-utils
+ - zip
+ - keychain
+ - mc
+ - netpbm
+ - bochs
+ - cgdb
+ - chrpath
+ - convmv
+ - diffstat
+ - fdupes
+ - htop
+ - meld
+ - ncdu
+ - patchelf
+ - pax-utils
+ - rpm2cpio
+ - socat
+ - tig
+ - upx
+ - parallel
+ - pigz
+ - pbzip2
+ - pxz
+ - lzip
+ - lrzip
+ - rzip
+ - squashfs-tools
+ - rlwrap
  - bzip2
  - gpw
  - lm_sensors
@@ -291,8 +464,7 @@ wspkg::pkgs:
  - gkrellm
  - gnuls
  - oxim
- - scim_pinyin
- - scim_tables
+ - scim
  - tidy
  - bsdcpio
  - bsdtar
@@ -310,15 +482,22 @@ wspkg::pkgs:
  - unix2dos
  - watch
  - ibus_chewing
+## Video
+ - xmms2
  - mplayer
  - x264
+## Wayland
  - ibus_wayland
  - weston
  - xwayland
+## Web
  - flash_plugin
  - firefox
  - w3m_el
  - java_plugin
+ - lynx
+ - w3m
+## WindowMaker
  - pclock
  - windowmaker
  - wmmemload
@@ -328,6 +507,14 @@ wspkg::pkgs:
 # - wmcliphist  	## Building: Source repo return 404
  - temperature_app
  - asbutton
+ - wmbiff
+ - wmweather+
+# - wmnd 		## Building: Invalid PKGBUILD
+ - wmcpuload
+# - wmclock 		## Building: Invalid PKGBUILD
+ - wmclockmon
+# - wmtime 		## Building: Invalid PKGBUILD
+## X11
  - desktop_base
  - im_switch
  - mlterm_tools
@@ -337,5 +524,20 @@ wspkg::pkgs:
  - enlightenment
  - xephyr
  - lxde
- - session_manager
- - htop
+# - afterstep 		## Building: link error
+ - fvwm
+ - mlterm
+ - rxvt
+ - xchm
+ - xorg
+ - xscreensaver
+ - xterm
+ - icewm
+ - synergy
+ - wdm
+ - xfig
+ - xlockmore
+ - fbpanel
+ - obconf
+ - openbox
+ - xrestop

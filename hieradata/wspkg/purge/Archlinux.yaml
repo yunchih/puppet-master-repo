@@ -7,4 +7,6 @@ wspkg::purgelist:
   - mtr			# conflict with `mtr-gtk`
   - cdrkit		# conflict with `cdrtools`
   - vim			# conflict with `gvim`
-  - eclipse-cpp		# conflict with `eclipse-java`
+  - gcc 		# conflict with `gcc-multilib`
+  - gcc-libs 		# conflict with `gcc-libs-multilib`
+  - unrar		# conflict with `rar`
