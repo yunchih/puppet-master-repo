@@ -34,10 +34,21 @@ class ws::cups {
 
 	$cups_secrets = ['/etc/cups/classes.conf', '/etc/cups/printers.conf']
 	$cups_secrets.each |$file| {
+
+		exec { "removing default `${file}`":
+			path	=> "/usr/bin:/usr/sbin:/bin",
+			command => "/bin/rm ${file} -f",
+			onlyif	=> [
+				"sh -c '! grep R217 ${file}'"
+			],
+		}
+
 		file { $file:
 			ensure	=> file,
+			replace	=> 'no',
 			notify  => Service[$cups_service],
 			mode	=> '0600',
+			source	=> "puppet:///wslab/217-base${file}"
 		}
 	}
 
