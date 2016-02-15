@@ -4,7 +4,7 @@ class ws::cups {
 
 
 	$packages = $::operatingsystem ? {
-		"Archlinux"	=> ['cups', 'ghostscript', 'gsfonts'],
+		"Archlinux"	=> ['cups', 'ghostscript', 'gsfonts', 'hplip'],
 		"FreeBSD"	=> ['cups']
 	}
 
