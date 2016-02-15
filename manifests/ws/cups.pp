@@ -17,19 +17,16 @@ class ws::cups {
 
 	file { '/etc/cups':
 		ensure	=> directory,
-		recurse	=> remote,
 		owner	=> '0',
 		group	=> 'lp',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/cups'
 	}
-	file { '/etc/cups/ppd':
-		ensure	=> directory,
-		recurse	=> remote,
-		owner	=> '0',
-		group	=> 'lp',
+
+	file { '/etc/cups/cupsd.conf':
+		ensure	=> file,
 		mode	=> '0640',
-		source	=> 'puppet:///wslab/217-base/etc/cups/ppd'
+		source	=> 'puppet:///wslab/217-base/etc/cups/cupsd.conf'
 	}
 
 	$cups_secrets = ['/etc/cups/classes.conf', '/etc/cups/printers.conf']
