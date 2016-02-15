@@ -28,7 +28,7 @@ class ws::pkg {
 		if (! member($unwanted_pkgs, $pkg) ) and (! defined(Package["${pkg}"]) ) { 
 			notice( $pkg ) 
 			package { $pkg:
-				ensure => 'latest'
+				ensure => 'present'
 			}
 		}
 	}

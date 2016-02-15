@@ -1,6 +1,7 @@
 
 class ws::pacman {
 	if $operatingsystem == 'Archlinux' {
+
 		$repo = {
 			'core'		=> { order => 10, },
 			'extra'		=> { order => 20, },
@@ -25,8 +26,9 @@ class ws::pacman {
 			source	=> "puppet:///wslab/217-base/etc/pacman.d/mirrorlist"
 		}
 		
-
-
+	  	exec { 'pacman-full-upgrade':
+	    		command     => "/sbin/pacman -Syu --noconfirm",
+	  	}
 	}
 
 }
