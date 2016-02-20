@@ -10,3 +10,4 @@ wspkg::purgelist:
   - gcc 		# conflict with `gcc-multilib`
   - gcc-libs 		# conflict with `gcc-libs-multilib`
   - unrar		# conflict with `rar`
+  - ruby-minitest	# conflict with `ruby`
