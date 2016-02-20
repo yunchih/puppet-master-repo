@@ -28,6 +28,22 @@ class ws::files {
 		source	=> 'puppet:///wslab/217-base/root'
 	}
 
+	$root_scripts = [
+		'nicer.sh',
+		'sethome.sh',
+		'createhome.py'
+	]
+
+	$root_scripts.each |$script| {
+		file { "/root/${script}":
+			ensure	=> file,
+			mode	=> '0744',
+			source	=> "puppet:///wslab/217-base/root/${script}"
+		}
+	}
+
+	## /root/wsmon
+
 	user { 'wsmon':
 		ensure	=> 'present',
 	}
@@ -66,7 +82,6 @@ class ws::files {
 	$wsmon_scripts.each |$script| {
 		file { "/root/wsmon/${script}":
 			ensure	=> file,
-			recurse	=> remote,
 			mode	=> '0550',
 			owner	=> '0',
 			group	=> 'robot',
