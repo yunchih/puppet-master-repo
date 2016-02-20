@@ -13,6 +13,7 @@ node default {
     include ws::ipsec
     include ws::sudo
     include ws::matlab
+    include ws::mail
     include ws::files
     include ws::pkg
 
