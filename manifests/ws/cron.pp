@@ -15,7 +15,7 @@ class ws::cron {
 		file { $cron:
 			ensure	=> directory,
 			recurse	=> remote,
-            notify  => Service[$cron_package],
+            		notify  => Service[$cron_package],
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',
