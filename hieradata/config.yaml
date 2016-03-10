@@ -2,3 +2,6 @@ ws::pacman::mirror:
     name: 'wsarch'
     server: 'http://repo/archrepo'
     sig_level: 'Never'
+
+ws::ssh::open_extra_ports:
+    - "linux1"
