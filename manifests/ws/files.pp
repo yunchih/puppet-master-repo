@@ -44,13 +44,15 @@ class ws::files {
 
 	## /root/wsmon
 
-	user { 'wsmon':
-		ensure	=> 'present',
-	}
-
 	group { 'robot':
 		ensure	=> 'present',
 	}
+
+	user { 'wsmon':
+		ensure	=> 'present',
+        groups  => 'robot'
+	}
+
 
 	$wsmon_directories = [
 		'/root/wsmon',
