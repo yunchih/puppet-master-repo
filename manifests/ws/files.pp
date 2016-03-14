@@ -44,16 +44,6 @@ class ws::files {
 
 	## /root/wsmon
 
-	group { 'robot':
-		ensure	=> 'present',
-	}
-
-	user { 'wsmon':
-		ensure	=> 'present',
-        groups  => 'robot'
-	}
-
-
 	$wsmon_directories = [
 		'/root/wsmon',
 		'/root/wsmon/tmp2mon'
