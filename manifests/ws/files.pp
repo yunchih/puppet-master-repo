@@ -4,7 +4,7 @@ class ws::files {
 	# prevent putting '/usr/bin/lp*' before Pacman installs cups
 	require ws::cups
 
-	$diverts = ['/usr/bin/lp', '/usr/bin/lpr', '/usr/bin/chsh', '/usr/bin/passwd', '/usr/bin/lpstat']
+	$diverts = ['/usr/bin/lp', '/usr/bin/lpr', '/usr/bin/chsh', '/usr/bin/passwd']
 
 	$diverts.each |$file| {
 		$orig = "${file}.orig"
