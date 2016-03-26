@@ -131,14 +131,14 @@ class ws::files {
 		}
 	}
 
-	### motd
-	#file { '/etc/motd':
-	#	ensure	=> file,
-	#	owner	=> '0',
-	#	group	=> '0',
-	#	mode	=> '0644',
-	#	source	=> 'puppet:///wslab/217-base/etc/motd'
-	#}
+	## motd
+	file { '/etc/motd':
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '0644',
+		source	=> 'puppet:///wslab/217-base/etc/motd'
+	}
 
 	### /etc/$directories
 	#file { ['/etc/limit.d']:
