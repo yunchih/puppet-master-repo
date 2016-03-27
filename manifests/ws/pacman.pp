@@ -25,9 +25,9 @@ class ws::pacman {
 			ensure	=> file,
 			source	=> "puppet:///wslab/217-base/etc/pacman.d/mirrorlist"
 		}
-		
+
 	  	exec { 'pacman-full-upgrade':
-	    		command     => "/sbin/pacman -Syu --noconfirm",
+			command     => "/root/pacman-full-upgrade.sh",
 	  	}
 	}
 
