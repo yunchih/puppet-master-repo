@@ -13,11 +13,13 @@ node default {
     include ws::ipsec
     include ws::sudo
     include ws::matlab
+    include ws::iptables
+    include ws::ulogd
     include ws::mail
     include ws::files
     include ws::pkg
 
-#   include ws::iptables
+#   include ws::audit
 #   include ws::gem
 #   include ws::pip
 
