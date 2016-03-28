@@ -95,7 +95,6 @@ wspkg::map:
   mercurial:                "mercurial"
   intltool:                 "intltool"
   ltrace:                   "ltrace"
-  mpich:                    "mpich"
   ncbi_toolkit:             "ncbi-toolkit"
   mono:                     "mono"
   julia:                    "julia"
