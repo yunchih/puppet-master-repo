@@ -29,6 +29,13 @@ class ws::ulogd {
         source	=> "puppet:///wslab/217-base/etc/logrotate.d/ulogd"
     }
 
+    file { "/var/log/wslab-packet.log":
+        ensure	=> file,
+        owner	=> '0',
+        group	=> '0',
+        mode	=> '600',
+    }
+
 	service { $service:
 		ensure	=> 'running'
 	}
