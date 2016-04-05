@@ -33,7 +33,7 @@ class ws::ulogd {
         ensure	=> file,
         owner	=> '0',
         group	=> '0',
-        mode	=> '600',
+        mode	=> '400',
     }
 
 	service { $service:
