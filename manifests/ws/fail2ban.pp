@@ -20,6 +20,13 @@ class ws::fail2ban {
 		group	=> '0',
 		mode	=> '0644',
 		source	=> 'puppet:///wslab/217-base/etc/fail2ban'
-       }
+    }
 
+	file { '/etc/logrotate.d/fail2ban':
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '0644',
+		source	=> 'puppet:///wslab/217-base/etc/logrotate.d/fail2ban'
+    }
 }
