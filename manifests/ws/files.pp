@@ -141,14 +141,19 @@ class ws::files {
 		source	=> 'puppet:///wslab/217-base/etc/motd'
 	}
 
-	### /etc/$directories
-	#file { ['/etc/limit.d']:
-	#	ensure	=> directory,
-	#	owner	=> '0',
-	#	group	=> '0',
-	#	mode	=> '0644',
-	#}
-
-	#file { ['/etc/motd', '/etc/limit.d/wslab.conf']:
+	## limits.d/wslab.conf
+	file { '/etc/security/limits.d/wslab.conf':
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '0644',
+		source	=> 'puppet:///wslab/217-base/etc/security/limits.d/wslab.conf',
+		replace	=> false
+	}
+	exec { 'substitute vmem_max in wslab.conf':
+		path	=> '/usr/bin:/usr/sbin:/bin',
+		command	=> 'sh /usr/share/217-base/limits.wslab.sh',
+		onlyif	=> 'sh -c "grep -q vmem_max /etc/security/limits.d/wslab.conf"',
+	}
 
 }
