@@ -17,10 +17,6 @@ class ws::ulogd {
         source	=> "puppet:///wslab/217-base/etc/ulogd.conf"
     }
 
-    file { "/etc/logrotate.d":
-        ensure	=> directory,
-    }
-
     file { "/etc/logrotate.d/ulogd":
         ensure	=> file,
         owner	=> '0',

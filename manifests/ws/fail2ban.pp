@@ -20,7 +20,6 @@ class ws::fail2ban {
 
 	file { '/etc/logrotate.d/fail2ban':
 		ensure	=> file,
-		notify	=> Service["fail2ban.service"],
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '0644',
