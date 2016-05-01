@@ -203,7 +203,7 @@ wspkg::pkgs:
 ## KDE
  - kde_meta_pkg
  - kde_gtk_config
- - adwaita_qt
+# - adwaita_qt  Cannot be built
  - qt4_qtconfig
  - qt5_qtct
 ## Library
