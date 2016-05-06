@@ -284,6 +284,7 @@ wspkg::map:
   gnutls_cli:               "gnutls"
   pcmanx:                   "pcmanx-gtk2"
   loudmouth:                "loudmouth"
+  nx:                       "nx-all"
   perl_bdb:                 "perl-berkeleydb"
   perl_data_serializer:     "perl-data-serializer"
   perl_dbd_mysql:           "perl-dbd-mysql"
