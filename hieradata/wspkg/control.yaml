@@ -308,6 +308,7 @@ wspkg::pkgs:
  - pcmanx
  - loudmouth
  - nx          ## Requested by b03902048
+ - netcat
 ## Perl
  - perl_bdb
  - perl_data_serializer
