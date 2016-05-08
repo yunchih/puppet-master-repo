@@ -16,9 +16,9 @@ class ws::pacman {
 
 		$mirror = hiera("ws::pacman::mirror")
 		pacman::repo { $mirror['name']:
-		    server      => $mirror['server'],
-		    sig_level   => $mirror['sig_level'],
-		    order       => 50,
+		    server	=> $mirror['server'],
+		    sig_level	=> $mirror['sig_level'],
+		    order	=> 50,
 		}
 
 		file { '/etc/pacman.d/mirrorlist':
@@ -27,7 +27,8 @@ class ws::pacman {
 		}
 
 	  	exec { 'pacman-full-upgrade':
-			command     => "/root/pacman-full-upgrade.sh",
+			command		=> "/root/pacman-full-upgrade.sh",
+			logoutput	=> "true"
 	  	}
 	}
 
