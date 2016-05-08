@@ -294,6 +294,7 @@ wspkg::map:
   perl_json:                "perl-json"
   perl_libwww:              "perl-libwww"
   perl_array_intspan:       ""
+  perl_net_cidr:            "perl-net-cidr"
   perl_bioperl:             "bioperl-live-git"
   perl_dbi:                 "perl-dbi"
   perl_mail_sender:         "perl-email-sender"

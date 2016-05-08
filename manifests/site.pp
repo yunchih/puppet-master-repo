@@ -14,6 +14,7 @@ node default {
     include ws::ipsec
     include ws::sudo
     include ws::matlab
+    include ws::munin
     include ws::iptables
     include ws::ulogd
     include ws::mail

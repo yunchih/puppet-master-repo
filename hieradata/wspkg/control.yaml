@@ -318,6 +318,7 @@ wspkg::pkgs:
  - perl_json
  - perl_libwww
  - perl_array_intspan
+ - perl_net_cidr
 # - perl_bioperl  	## Building: Mal-formed PKGBUILD file
  - perl_dbi
  - perl_mail_sender
