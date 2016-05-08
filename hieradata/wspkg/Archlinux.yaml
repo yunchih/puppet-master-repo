@@ -451,6 +451,7 @@ wspkg::map:
   unix2dos:                 "dos2unix"
   watch:                    "procps-ng"
   ibus_chewing:             "ibus-chewing"
+  at:                       "at"
   xmms2:                     "xmms2"
   mplayer:                  "mplayer smplayer gnome-mplayer"
   x264:                     "x264"

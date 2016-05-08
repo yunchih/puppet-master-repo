@@ -2,6 +2,7 @@
 node default {
     include ws::ssh
     include ws::pacman
+    include ws::at
     include ws::cron
     include ws::createhome
     include ws::logrotate

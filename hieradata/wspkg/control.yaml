@@ -485,6 +485,7 @@ wspkg::pkgs:
  - unix2dos
  - watch
  - ibus_chewing
+ - at
 ## Video
  - xmms2
  - mplayer
