@@ -262,6 +262,7 @@ wspkg::map:
   lftp:                     "lftp"
   ncftp:                    "ncftp"
   nmap:                     "nmap"
+  net-tools:                "net-tools"
   oidentd:                  "oidentd"
   rsync:                    "rsync"
   tcpdump:                  "tcpdump"
