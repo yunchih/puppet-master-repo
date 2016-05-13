@@ -28,7 +28,8 @@ class ws::pacman {
 
 	  	exec { 'pacman-full-upgrade':
 			command		=> "/root/pacman-full-upgrade.sh",
-			logoutput	=> "true"
+			logoutput	=> "true",
+			timeout		=> 1200
 	  	}
 	}
 
