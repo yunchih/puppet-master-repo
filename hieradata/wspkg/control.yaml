@@ -429,6 +429,7 @@ wspkg::pkgs:
  - tree
  - unrar
  - unzip
+ - unp
  - xdg-utils
  - zip
  - keychain

@@ -396,6 +396,7 @@ wspkg::map:
   tree:                     "tree"
   unrar:                    "unrar"
   unzip:                    "unzip"
+  unp:                      "unp"
   xdg-utils:                "xdg-utils"
   zip:                      "zip"
   keychain:                 "keychain"
