@@ -311,6 +311,7 @@ wspkg::pkgs:
  - nx          ## Requested by b03902048
  - netcat
  - traceroute
+ - proxychains-ng
 ## Perl
  - perl_bdb
  - perl_data_serializer

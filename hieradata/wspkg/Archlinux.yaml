@@ -288,6 +288,7 @@ wspkg::map:
   nx:                       "nx-all"
   netcat:                   "gnu-netcat"
   traceroute:               "traceroute"
+  proxychains-ng:           "proxychains-ng"
   perl_bdb:                 "perl-berkeleydb"
   perl_data_serializer:     "perl-data-serializer"
   perl_dbd_mysql:           "perl-dbd-mysql"
