@@ -4,4 +4,4 @@ ws::pacman::mirror:
     sig_level: 'Never'
 
 ws::ssh::open_extra_ports:
-    - "linux1"
+    - "linux1.sa"
