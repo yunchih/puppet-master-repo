@@ -11,7 +11,6 @@ class ws::pacman {
 
 		class { 'pacman':
 			repositories	=> $repo,
-            ignore_pkg      => "systemd"
 		}
 
 
