@@ -30,7 +30,6 @@ class ws::nfs {
 	$autos.each |$auto| { 
 		file { "/etc/autofs/$auto":
 			ensure	=> file,
-            notify  => Service[$nfs_service],
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',
