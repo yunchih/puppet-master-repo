@@ -508,7 +508,7 @@ wspkg::map:
   mlterm:                   "mlterm"
   rxvt:                     "rxvt"
   xchm:                     "xchm"
-  xorg:                     "xorg-server"
+  xorg:                     "xorg xorg-server xorg-drivers"
   xscreensaver:             "xscreensaver"
   xterm:                    "xterm"
   icewm:                    "icewm"
