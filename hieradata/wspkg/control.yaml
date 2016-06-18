@@ -53,6 +53,7 @@ wspkg::pkgs:
  - pkg_mgmt
  - net_snmp
  - sshit
+ - nagios-plugins
  - fdisk
  - gdisk
 ## Database
@@ -96,6 +97,8 @@ wspkg::pkgs:
  - valgrind
  - expect
  - lisp
+ - sdcc
+ - spim
  - doxygen
  - ocaml
  - bzr
@@ -126,6 +129,8 @@ wspkg::pkgs:
  - emacs
  - libreoffice
  - vim_gtk
+ - cscope
+ - global
  - joe
  - nano
 ## Electronics
@@ -203,6 +208,8 @@ wspkg::pkgs:
 ## KDE
  - kde_meta_pkg
  - kde_gtk_config
+ - kchmviewer
+ - okular
 # - adwaita_qt  Cannot be built
  - qt4_qtconfig
  - qt5_qtct
@@ -255,6 +262,7 @@ wspkg::pkgs:
  - mutt
  - tin
  - metamail
+ - abook
 ## Math
  - gnuplot
  - gsl
@@ -425,6 +433,7 @@ wspkg::pkgs:
  - markdown
  - pandoc
 ## Utilities
+ - fakeroot
  - geeqie
  - pv
  - rar
