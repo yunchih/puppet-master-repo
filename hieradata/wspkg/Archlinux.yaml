@@ -74,7 +74,7 @@ wspkg::map:
   eclipse:                  "eclipse-java eclipse-pydev eclipse-egit"  ## `eclipse-linuxtools` dependency: `eclipse-cpp` conflict with `eclipse-java`
   jikes:                    ""
   biojava:                  "biojava"
-  autotool:                 "autoconf automake" 
+  autotool:                 "autoconf automake autoconf-archive"
   bison:                    "bison"
   ccache:                   "ccache"
   cmake:                    "cmake"
