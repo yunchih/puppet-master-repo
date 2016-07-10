@@ -10,7 +10,7 @@ class ws::mail {
 		ensure	=> 'present'
 	}
 
-	file { [ '/etc/mail']:
+	file { [ '/etc/mail', '/etc/mail/ssl']:
 		ensure	=> directory,
 		owner	=> '0',
 		group	=> '0',
@@ -24,6 +24,22 @@ class ws::mail {
 		group	=> '0',
 		mode	=> '644',
 		source	=> "puppet:///wslab/217-base/etc/mail/exim.conf"
+	}
+
+	file { "/etc/mail/ssl/exim.crt":
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '400',
+		source	=> "puppet:///wslab/217-base/etc/mail/ssl/exim.crt"
+	}
+
+	file { "/etc/mail/ssl/exim.pem":
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '444',
+		source	=> "puppet:///wslab/217-base/etc/mail/ssl/exim.pem"
 	}
 
 	service { $exim_service:
