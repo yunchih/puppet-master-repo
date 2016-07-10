@@ -24,6 +24,13 @@ class ws::snmp {
 		source	=> 'puppet:///wslab/217-base/etc/snmp/snmpd.conf'
 	}
 
+	file { '/root/snmp':
+		ensure	=> directory,
+		owner	=> '0',
+		group	=> 'robot',
+		mode	=> '0770'
+	}
+
 	service { "snmpd":
 		ensure	=> 'running'
 	}
