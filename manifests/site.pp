@@ -6,9 +6,9 @@ node default {
     include ws::cron
     include ws::createhome
     include ws::logrotate
-    include ws::nscd
     include ws::nfs
     include ws::ldap
+    include ws::nscd
     include ws::fail2ban
     include ws::cups
     include ws::snmp

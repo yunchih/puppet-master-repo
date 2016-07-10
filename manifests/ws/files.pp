@@ -31,7 +31,6 @@ class ws::files {
 	$root_scripts = [
 		'nicer.sh',
 		'sethome.sh',
-		'createhome.py',
 		'pacman-full-upgrade.sh',
 	]
 
