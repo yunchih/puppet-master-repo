@@ -1,5 +1,7 @@
 class ws::pkg {
 
+    require ws::pkg_manager
+
 	$pkgs = hiera("wspkg::pkgs")
 	$unwanted_pkgs = hiera("wspkg::purgelist", [])
 	$pkgs_map = hiera_hash("wspkg::map") # Find all mappings in common.yaml and $::osfamily.yaml

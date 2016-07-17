@@ -1,5 +1,5 @@
 
-class ws::pacman {
+class ws::pkg_manager {
 	if $operatingsystem == 'Archlinux' {
 
 		$repo = {
@@ -32,6 +32,5 @@ class ws::pacman {
 			timeout		=> 1200
 	  	}
 	}
-
 }
 
