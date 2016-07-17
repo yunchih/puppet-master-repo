@@ -38,7 +38,8 @@ class ws::nfs {
 	}
 
 	service { $nfs_service:
-		ensure	=> 'running'
+		ensure	=> 'running',
+        enable  => true
 	}
 
 	$base_links = ['bebi','course','dept','faculty']	

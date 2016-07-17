@@ -4,7 +4,8 @@ class ws::ssh {
 	}
 
 	service { 'sshd':
-		ensure	=> 'running'
+		ensure	=> 'running',
+        enable  => true
 	}
 
 	$ws_with_extra_ports = hiera("ws::ssh::open_extra_ports")

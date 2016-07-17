@@ -11,6 +11,7 @@ class ws::nscd {
 		ensure		=> 'latest'
 	}
 	service { $nscd_service:
-		ensure		=> 'running'
+		ensure		=> 'running',
+        enable      => true
 	}
 }

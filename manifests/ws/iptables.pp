@@ -22,6 +22,7 @@ class ws::iptables {
     }
 
 	service { $service:
-		ensure	=> 'running'
+		ensure	=> 'running',
+        enable  => true
 	}
 }

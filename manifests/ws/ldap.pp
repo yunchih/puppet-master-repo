@@ -37,7 +37,8 @@ class ws::ldap {
 	}
 
 	service { $ldap_service:
-		ensure	=> 'running'
+		ensure	=> 'running',
+        enable  => true
 	}
 
 }
