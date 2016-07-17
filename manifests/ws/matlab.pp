@@ -19,9 +19,10 @@ class ws::matlab {
             mode	=> '0644',
             source  => "puppet:///wslab/217-base/etc/systemd/system/matlab-lm.service"
         }
+
+        service { "matlab-lm":
+            ensure	=> 'running'
+        }
     }
 
-	service { "matlab-lm":
-		ensure	=> 'running'
-	}
 }
