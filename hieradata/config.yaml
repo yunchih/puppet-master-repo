@@ -5,3 +5,6 @@ ws::pacman::mirror:
 
 ws::ssh::open_extra_ports:
     - "linux1.sa"
+
+ws::matlab::license_server:
+    - "linux9.sa"
