@@ -23,6 +23,10 @@ class ws::matlab {
         service { "matlab-lm":
             ensure	=> 'running'
         }
+
+        file { '/usr/tmp':
+            ensure  => directory
+        }
     }
 
 }
