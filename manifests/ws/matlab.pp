@@ -11,6 +11,10 @@ class ws::matlab {
 		target	=> '/nfs/linux/matlab'
 	}	
 
+	package { "ncurses5-compat-libs":
+		ensure	=> 'present'
+	}
+
 	$license_server = hiera("ws::matlab::license_server")
 	if $trusted['certname'] in $license_server  {
         file { '/etc/systemd/system/matlab-lm.service':
