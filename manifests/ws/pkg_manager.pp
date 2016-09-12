@@ -14,23 +14,25 @@ class ws::pkg_manager {
 		}
 
 
-		$mirror = hiera("ws::pacman::mirror")
-		pacman::repo { $mirror['name']:
-		    server	=> $mirror['server'],
-		    sig_level	=> $mirror['sig_level'],
+		$aur = hiera("ws::arch::aur")
+		pacman::repo { $aur['name']:
+		    server	=> $aur['server'],
+		    sig_level	=> $aur['sig_level'],
 		    order	=> 50,
 		}
 
+		$wsarch = hiera("ws::arch::meta")
+		pacman::repo { $wsarch['name']:
+		    server	=> $wsarch['server'],
+		    sig_level	=> $wsarch['sig_level'],
+		    order	=> 60,
+		}
+        
 		file { '/etc/pacman.d/mirrorlist':
 			ensure	=> file,
 			source	=> "puppet:///wslab/217-base/etc/pacman.d/mirrorlist"
 		}
 
-	  	exec { 'pacman-full-upgrade':
-			command		=> "/root/pacman-full-upgrade.sh",
-			logoutput	=> "true",
-			timeout		=> 1200
-	  	}
 	}
 }
 
