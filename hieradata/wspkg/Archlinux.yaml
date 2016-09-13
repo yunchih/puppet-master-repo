@@ -520,8 +520,6 @@ wspkg::map:
   obconf:                   "obconf"
   openbox:                  "openbox"
   xrestop:                  "xrestop"
-
-# 217-Base
   ca-certificates:          "ca-certificates"
   cups:                     "cups"
   python-pycups:            "python-pycups"
