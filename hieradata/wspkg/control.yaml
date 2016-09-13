@@ -558,3 +558,30 @@ wspkg::pkgs:
  - obconf
  - openbox
  - xrestop
+# 217-base
+ - ca-certificates
+ - cups
+ - python-pycups
+ - python2-pycups
+ - exim
+ - ipsec-tools
+ - perl-yaml
+ - lm_sensors
+ - munin-node
+ - nfs-utils
+ - monitoring-plugins
+ - openssh
+ - net-snmp
+ - psmisc
+ - quota-tools
+ - smartmontools
+ - ntp
+ - sudo
+ - openldap
+ - nss-pam-ldapd
+ - parted
+ - lshw
+ - htop
+ - fail2ban
+ - chkrootkit
+ - nsca
