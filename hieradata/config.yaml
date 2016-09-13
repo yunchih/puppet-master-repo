@@ -1,10 +1,15 @@
-ws::pacman::mirror:
-    name: 'wsarch'
-    server: 'http://repo.sa/archrepo'
-    sig_level: 'Never'
-
 ws::ssh::open_extra_ports:
     - "linux1.sa"
 
 ws::matlab::license_server:
     - "linux9.sa"
+
+ws::arch::aur:
+    name: 'aur'
+    server: 'http://repo.sa/archrepo/'
+    sig_level: 'Never'
+
+ws::arch::meta:
+    name: 'wsarch'
+    server: 'http://wslab.csie.ntu.edu.tw/repos/'
+    sig_level: 'Never'
