@@ -374,7 +374,7 @@ wspkg::map:
   bibtool:                  "bibtool"
   latex2html:               "latex2html"
   ipe:                      "ipe"
-  transfig:                 "transfig"
+  transfig:                 "fig2dev"
   latex_cjk:                ""
   biber:                    ""
   texlive:                  "texlive-most texlive-lang"
