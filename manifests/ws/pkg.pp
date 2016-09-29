@@ -18,7 +18,6 @@ class ws::pkg {
 
 	notice( "Packages purged on node `${osfamily}::${agent}` to resolve conflict" )
 	$unwanted_pkgs.each |$pkg| { 
-		notice( "Purging $pkg" ) 
 		package { $pkg:
 			ensure => 'absent',
 			uninstall_options => ['--nodeps', '--nodeps']
@@ -28,15 +27,9 @@ class ws::pkg {
 	notice( "Packages installed to node `${osfamily}::${agent}`:" )
 	$pkgs_all.each |$pkg| { 
 		if (! member($unwanted_pkgs, $pkg) ) and (! defined(Package["${pkg}"]) ) { 
-			notice( $pkg ) 
 			package { $pkg:
 				ensure => 'present'
 			}
 		}
 	}
-	
-
-	#ensure_packages( $pkgs_all )
-
-	#ensure_resource('package', $pkgs_all, { 'ensure' => 'present' })
 }
