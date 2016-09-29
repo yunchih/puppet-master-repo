@@ -13,3 +13,4 @@ wspkg::purgelist:
   - ruby-minitest	# conflict with `ruby`
   - haskell-fail # no longer available in official repo
   - haskell-regex-pcre-builtin # no longer available in official repo
+  - transfig    # removed from official repo and conflicts with `fig2dev`
