@@ -22,11 +22,7 @@ node default {
     include ws::mail
     include ws::munin
     include ws::files
+    include ws::systemd
     include ws::pkg
-
-#   include ws::audit
-#   include ws::gem
-#   include ws::pip
-
 }
 

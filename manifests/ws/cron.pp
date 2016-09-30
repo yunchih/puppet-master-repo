@@ -9,7 +9,7 @@ class ws::cron {
 		ensure	=> 'present'
 	}
 
-	$crons = [ '/etc/cron.d/', '/etc/cron.daily/', '/etc/cron.hourly']
+	$crons = [ '/etc/cron.d/', '/etc/cron.daily/']
 
 	$crons.each |$cron| { 
 		file { $cron:
