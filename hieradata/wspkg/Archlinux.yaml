@@ -12,7 +12,7 @@ wspkg::map:
   ispell:                   "ispell"
   less:                     "less"
   locate:                   "mlocate"
-  ncurses_term:             "ncurses"
+  ncurses_term:             "ncurses ncurses5-compat-libs"
   patch:                    "patch"
   pci:                      "pciutils"
   perl:                     "perl"
