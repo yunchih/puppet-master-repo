@@ -2,6 +2,7 @@ ws::ssh::open_extra_ports:
     - "linux1.sa"
 
 ws::matlab::license_server:
+    - "linux0.sa"
     - "linux9.sa"
 
 ws::arch::aur:

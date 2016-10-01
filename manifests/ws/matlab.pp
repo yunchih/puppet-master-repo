@@ -24,11 +24,15 @@ class ws::matlab {
             source  => "puppet:///wslab/217-base/etc/systemd/system/matlab-lm.service"
         }
 
+        # matlab-lm.service will be deemed 'failed' by SystemD
+        # afte it completes forking.  If set as "ensure => 'running'",
+        # Puppet will try to kill the lm and restart it.
         service { "matlab-lm":
-            ensure	=> 'running'
+            ensure  => undef,
+            enable	=> 'true'
         }
 
-        file { '/usr/tmp':
+        file { ['/usr/tmp', '/var/tmp']:
             ensure  => directory
         }
     }
