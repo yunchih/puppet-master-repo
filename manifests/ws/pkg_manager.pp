@@ -30,7 +30,7 @@ class ws::pkg_manager {
         
 		file { '/etc/pacman.d/mirrorlist':
 			ensure	=> file,
-			source	=> "puppet:///wslab/217-base/etc/pacman.d/mirrorlist"
+			source	=> "puppet:///$environment/217-base/etc/pacman.d/mirrorlist"
 		}
 
 	}

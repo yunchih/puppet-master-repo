@@ -21,7 +21,7 @@ class ws::munin {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/etc/munin/munin-node.conf'
+		source	=> "puppet:///$environment/217-base/etc/munin/munin-node.conf"
 	}
 
 	## plugins

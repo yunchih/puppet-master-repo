@@ -25,7 +25,7 @@ class ws::files {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/root'
+		source	=> "puppet:///$environment/217-base/root"
 	}
 
 	$root_scripts = [
@@ -38,7 +38,7 @@ class ws::files {
 		file { "/root/${script}":
 			ensure	=> file,
 			mode	=> '0744',
-			source	=> "puppet:///wslab/217-base/root/${script}"
+			source	=> "puppet:///$environment/217-base/root/${script}"
 		}
 	}
 
@@ -77,14 +77,14 @@ class ws::files {
 			mode	=> '0550',
 			owner	=> '0',
 			group	=> 'robot',
-			source	=> "puppet:///wslab/217-base/root/wsmon/${script}"
+			source	=> "puppet:///$environment/217-base/root/wsmon/${script}"
 		}
 	}
 
 	file { '/root/wsmon/nagios-check.conf':
 		ensure	=> file,
 		mode	=> '0440',
-		source	=> 'puppet:///wslab/217-base/root/wsmon/nagios-check.conf'
+		source	=> "puppet:///$environment/217-base/root/wsmon/nagios-check.conf"
 	}
 
 	file { '/root/wsmon/.ssh':
@@ -92,7 +92,7 @@ class ws::files {
 		recurse	=> remote,
 		owner	=> 'wsmon',
 		mode	=> '0700',
-		source	=> 'puppet:///wslab/217-base/root/wsmon/.ssh'
+		source	=> "puppet:///$environment/217-base/root/wsmon/.ssh"
 	}
 
 	## /usr
@@ -101,7 +101,7 @@ class ws::files {
 		recurse	=> remote,
 		owner	=> '0',
 		group	=> '0',
-		source	=> 'puppet:///wslab/217-base/usr'
+		source	=> "puppet:///$environment/217-base/usr"
 	}
 
 	## SSL
@@ -111,7 +111,7 @@ class ws::files {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/etc/ssl'
+		source	=> "puppet:///$environment/217-base/etc/ssl"
 	}
 
 	## alias for lp*
@@ -127,7 +127,7 @@ class ws::files {
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '0644',
-			source	=> "puppet:///wslab/217-base${file}"
+			source	=> "puppet:///$environment/217-base${file}"
 		}
 	}
 
@@ -137,7 +137,7 @@ class ws::files {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/etc/motd'
+		source	=> "puppet:///$environment/217-base/etc/motd"
 	}
 
 	## limits.d/wslab.conf
@@ -146,7 +146,7 @@ class ws::files {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/etc/security/limits.d/wslab.conf',
+		source	=> "puppet:///$environment/217-base/etc/security/limits.d/wslab.conf",
 		replace	=> false
 	}
 	exec { 'substitute vmem_max in wslab.conf':

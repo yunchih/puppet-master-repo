@@ -4,6 +4,6 @@ class ws::systemd {
         owner	=> 0,
         group	=> 0,
         mode	=> '0644',
-        source  => "puppet:///wslab/217-base/etc/systemd/journald.conf"
+        source  => "puppet:///$environment/217-base/etc/systemd/journald.conf"
 	}
 }

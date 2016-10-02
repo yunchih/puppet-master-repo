@@ -20,13 +20,13 @@ class ws::cups {
 		owner	=> '0',
 		group	=> 'lp',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/etc/cups'
+		source	=> "puppet:///$environment/217-base/etc/cups"
 	}
 
 	file { '/etc/cups/cupsd.conf':
 		ensure	=> file,
 		mode	=> '0640',
-		source	=> 'puppet:///wslab/217-base/etc/cups/cupsd.conf'
+		source	=> "puppet:///$environment/217-base/etc/cups/cupsd.conf"
 	}
 
 	$cups_secrets = ['/etc/cups/classes.conf', '/etc/cups/printers.conf']
@@ -45,7 +45,7 @@ class ws::cups {
 			replace	=> 'no',
 			notify  => Service[$cups_service],
 			mode	=> '0600',
-			source	=> "puppet:///wslab/217-base${file}"
+			source	=> "puppet:///$environment/217-base${file}"
 		}
 	}
 

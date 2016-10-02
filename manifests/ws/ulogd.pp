@@ -14,7 +14,7 @@ class ws::ulogd {
         owner	=> '0',
         group	=> '0',
         mode	=> '644',
-        source	=> "puppet:///wslab/217-base/etc/ulogd.conf"
+        source	=> "puppet:///$environment/217-base/etc/ulogd.conf"
     }
 
     file { "/etc/logrotate.d/ulogd":
@@ -22,7 +22,7 @@ class ws::ulogd {
         owner	=> '0',
         group	=> '0',
         mode	=> '644',
-        source	=> "puppet:///wslab/217-base/etc/logrotate.d/ulogd"
+        source	=> "puppet:///$environment/217-base/etc/logrotate.d/ulogd"
     }
 
     file { "/var/log/wslab":

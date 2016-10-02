@@ -23,7 +23,7 @@ class ws::mail {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '644',
-		source	=> "puppet:///wslab/217-base/etc/mail/exim.conf"
+		source	=> "puppet:///$environment/217-base/etc/mail/exim.conf"
 	}
 
 	file { "/etc/mail/ssl/exim.crt":
@@ -31,7 +31,7 @@ class ws::mail {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '400',
-		source	=> "puppet:///wslab/217-base/etc/mail/ssl/exim.crt"
+		source	=> "puppet:///$environment/217-base/etc/mail/ssl/exim.crt"
 	}
 
 	file { "/etc/mail/ssl/exim.pem":
@@ -39,7 +39,7 @@ class ws::mail {
 		owner	=> '0',
 		group	=> '0',
 		mode	=> '444',
-		source	=> "puppet:///wslab/217-base/etc/mail/ssl/exim.pem"
+		source	=> "puppet:///$environment/217-base/etc/mail/ssl/exim.pem"
 	}
 
 	service { $exim_service:

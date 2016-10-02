@@ -21,7 +21,7 @@ class ws::snmp {
 		owner		=> '0',
 		group		=> '0',
 		mode	=> '0600',
-		source	=> 'puppet:///wslab/217-base/etc/snmp/snmpd.conf'
+		source	=> "puppet:///$environment/217-base/etc/snmp/snmpd.conf"
 	}
 
 	file { '/root/snmp':

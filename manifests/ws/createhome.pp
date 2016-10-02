@@ -5,7 +5,7 @@ class ws::createhome {
     file { "/root/createhome.py":
         ensure	=> file,
         mode	=> '0744',
-        source	=> "puppet:///wslab/217-base/root/createhome.py"
+        source	=> "puppet:///$environment/217-base/root/createhome.py"
     }
 
 	exec { 'createhome':

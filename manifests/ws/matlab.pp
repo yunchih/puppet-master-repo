@@ -21,7 +21,7 @@ class ws::matlab {
             owner	=> 0,
             group	=> 0,
             mode	=> '0644',
-            source  => "puppet:///wslab/217-base/etc/systemd/system/matlab-lm.service"
+            source  => "puppet:///$environment/217-base/etc/systemd/system/matlab-lm.service"
         }
 
         # matlab-lm.service will be deemed 'failed' by SystemD

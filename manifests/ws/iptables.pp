@@ -18,7 +18,7 @@ class ws::iptables {
         owner	=> '0',
         group	=> '0',
         mode	=> '600',
-        source	=> "puppet:///wslab/217-base/etc/iptables/iptables.rules"
+        source	=> "puppet:///$environment/217-base/etc/iptables/iptables.rules"
     }
 
 	service { $service:

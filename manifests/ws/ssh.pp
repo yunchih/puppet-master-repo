@@ -11,10 +11,10 @@ class ws::ssh {
 	$ws_with_extra_ports = hiera("ws::ssh::open_extra_ports")
 
     if $trusted['certname'] in $ws_with_extra_ports {
-        $source = "puppet:///wslab/217-base/etc/ssh/sshd_config_extra_ports"
+        $source = "puppet:///$environment/217-base/etc/ssh/sshd_config_extra_ports"
     }
     else {
-        $source = "puppet:///wslab/217-base/etc/ssh/sshd_config"
+        $source = "puppet:///$environment/217-base/etc/ssh/sshd_config"
     }
 
     file { '/etc/ssh/sshd_config':

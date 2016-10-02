@@ -33,7 +33,7 @@ class ws::nfs {
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',
-			source	=> "puppet:///wslab/217-base/etc/${auto}"
+			source	=> "puppet:///$environment/217-base/etc/${auto}"
 		}
 	}
 

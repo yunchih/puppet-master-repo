@@ -19,7 +19,7 @@ class ws::cron {
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',
-			source	=> "puppet:///wslab/217-base${cron}"
+			source	=> "puppet:///$environment/217-base${cron}"
 		}
 	}
 

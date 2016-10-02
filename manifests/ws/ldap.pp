@@ -21,7 +21,7 @@ class ws::ldap {
 		owner		=> '0',
 		group		=> '0',
 		mode	=> '0644',
-		source	=> 'puppet:///wslab/217-base/etc/ldap'
+		source	=> "puppet:///$environment/217-base/etc/ldap"
 	}
 	
 	$ldap_files = ['/etc/pam_ldap.conf', '/etc/nsswitch.conf', '/etc/nslcd.conf', '/etc/pam.d/system-auth', '/etc/pam.d/su', '/etc/pam.d/su-l', '/etc/pam.d/passwd']
@@ -32,7 +32,7 @@ class ws::ldap {
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',
-			source	=> "puppet:///wslab/217-base${file}"
+			source	=> "puppet:///$environment/217-base${file}"
 		}
 	}
 

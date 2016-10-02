@@ -16,7 +16,7 @@ class ws::ipsec {
 		owner 	=> '0',
 		group 	=> '0',
 		mode	=> '0400',
-		source	=> "puppet:///wslab/217-base/ipsec/${agent}/ipsec-tools.conf"
+		source	=> "puppet:///$environment/217-base/ipsec/${agent}/ipsec-tools.conf"
 	}
 
 	service { "ipsec":
