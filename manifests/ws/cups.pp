@@ -50,6 +50,6 @@ class ws::cups {
 	}
 
 	service { $cups_service:
-		ensure	=> 'running'
+		ensure	=> 'stopped'
 	}
 }
