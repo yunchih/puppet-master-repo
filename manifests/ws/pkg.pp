@@ -16,7 +16,6 @@ class ws::pkg {
 
 	$agent = $trusted['certname']
 
-	notice( "Packages purged on node `${osfamily}::${agent}` to resolve conflict" )
 	$unwanted_pkgs.each |$pkg| { 
 		package { $pkg:
 			ensure => 'absent',
@@ -24,7 +23,6 @@ class ws::pkg {
 		}
 	}
 
-	notice( "Packages installed to node `${osfamily}::${agent}`:" )
 	$pkgs_all.each |$pkg| { 
 		if (! member($unwanted_pkgs, $pkg) ) and (! defined(Package["${pkg}"]) ) { 
 			package { $pkg:
