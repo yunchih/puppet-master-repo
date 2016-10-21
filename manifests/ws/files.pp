@@ -1,33 +1,6 @@
 
 class ws::files {
 
-	# prevent putting '/usr/bin/lp*' before Pacman installs cups
-	require ws::cups
-
-	$diverts = ['/usr/bin/lp', '/usr/bin/lpr', '/usr/bin/chsh', '/usr/bin/passwd']
-
-	$diverts.each |$file| {
-		$orig = "${file}.orig"
-		exec { "keep ${file}":
-			path	=> "/usr/bin:/usr/sbin:/bin",
-			command => "/bin/cp ${file} ${orig} -r",
-			onlyif	=> [
-				"sh -c '! test -f ${orig}'",
-				"sh -c 'test -f ${file}'"
-			],
-		}
-	}
-
-	## /root
-	file { '/root':
-		ensure	=> directory,
-		recurse	=> remote,
-		owner	=> '0',
-		group	=> '0',
-		mode	=> '0644',
-		source	=> "puppet:///$environment/217-base/root"
-	}
-
 	$root_scripts = [
 		'nicer.sh',
 		'sethome.sh',
@@ -96,12 +69,42 @@ class ws::files {
 	}
 
 	## /usr
-	file { '/usr':
+	file { '/usr/lib':
 		ensure	=> directory,
 		recurse	=> remote,
 		owner	=> '0',
 		group	=> '0',
-		source	=> "puppet:///$environment/217-base/usr"
+		source	=> "puppet:///$environment/217-base/usr/lib"
+	}
+
+	file { '/usr/share':
+		ensure	=> directory,
+		recurse	=> remote,
+		owner	=> '0',
+		group	=> '0',
+		source	=> "puppet:///$environment/217-base/usr/share"
+	}
+
+    # Diverted binaries: replace the pre-installed binaries
+	$diverts = ['/usr/bin/lp', '/usr/bin/lpr', '/usr/bin/chsh', '/usr/bin/passwd']
+
+	# prevent putting '/usr/bin/lp*' before Pacman installs cups
+	require ws::cups
+
+	$diverts.each |$file| {
+		$orig = "${file}.orig"
+		exec { "keep ${file}":
+			path	=> "/usr/bin:/usr/sbin:/bin",
+			command => "/bin/cp ${file} ${orig} -a",
+			onlyif	=> [
+				"sh -c '! test -f ${orig}'",
+				"sh -c 'test -f ${file}'"
+			],
+		} ->
+        file { "${file}":
+			ensure	=> file,
+			source	=> "puppet:///$environment/217-base${file}"
+        }
 	}
 
 	## SSL
