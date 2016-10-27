@@ -20,6 +20,7 @@ class ws::ipsec {
 	}
 
 	service { "ipsec":
-		ensure	=> 'running'
+		ensure	=> 'running',
+        enable  => 'true'
 	}
 }
