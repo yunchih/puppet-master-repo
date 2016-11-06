@@ -1,2 +1,3 @@
 modules
 .r10k-deploy.json
+hieradata/banlist.yaml

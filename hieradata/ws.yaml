@@ -1,0 +1,21 @@
+ws::ssh::extra_ports::servers:
+    - "linux0.sa"
+    - "linux1.sa"
+
+ws::ssh::extra_ports:
+    - 80
+    - 443
+
+ws::matlab::license_server:
+    - "linux0.sa"
+    - "linux9.sa"
+
+ws::arch::aur:
+    name: 'aur'
+    server: 'http://repo.sa/archrepo/'
+    sig_level: 'Never'
+
+ws::arch::meta:
+    name: 'wsarch'
+    server: 'http://wslab.csie.ntu.edu.tw/repos/'
+    sig_level: 'Never'
