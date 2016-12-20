@@ -193,7 +193,7 @@ wspkg::map:
   kde_meta_pkg:             "plasma-meta"
   kde_gtk_config:           "kde-gtk-config"
   kchmviewer:               "kchmviewer"
-  okular:                   "kdegraphics-okular"
+  okular:                   "okular"
   adwaita_qt:               "adwaita-qt4 adwaita-qt5"
   qt4_qtconfig:             "qt4"
   qt5_qtct:                 "qt5ct"
