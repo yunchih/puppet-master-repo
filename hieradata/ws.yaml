@@ -1,6 +1,8 @@
 ws::ssh::extra_ports::servers:
     - "linux0.sa"
     - "linux1.sa"
+    - "linux2.sa"
+    - "linux3.sa"
 
 ws::ssh::extra_ports:
     - 80
