@@ -472,7 +472,7 @@ wspkg::map:
   ibus_wayland:             "ibus"
   weston:                   "weston"
   xwayland:                 "xorg-server-xwayland"
-  flash_plugin:             "flashplugin lib32-flashplugin swfdec gnash"
+  flash_plugin:             "flashplugin lib32-flashplugin swfdec gnash-git"
   firefox:                  "firefox firefox-i18n-zh-tw"
   w3m_el:                   "emacs-w3m-cvs"
   java_plugin:              "icedtea-web"
