@@ -198,6 +198,7 @@ wspkg::pkgs:
  - gimp
  - graphviz
  - xloadimage
+ - opengl
 ## Haskell
  - hugs
  - haskell_platform
