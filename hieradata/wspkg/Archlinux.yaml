@@ -57,7 +57,7 @@ wspkg::map:
   sqlite:                   "sqlite"
   ant:                      "apache-ant"
   clang:                    "clang clang-tools-extra"
-  gcc:                      "gcc-multilib gcc-ada-multilib gcc-fortran-multilib gcc-objc-multilib gcc47"
+  gcc:                      "gcc-multilib gcc-ada-multilib gcc-fortran-multilib gcc-objc-multilib gcc47 gcc49"
   gdb:                      "gdb"
   golang:                   "go"
   git:                      "git gitg"
