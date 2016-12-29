@@ -245,6 +245,7 @@ wspkg::pkgs:
  - zmq_dev
  - libxml2_dev
  - libdb_cxx_dev
+ - kde_dev
 ## Lua
  - lua51
  - lua52
