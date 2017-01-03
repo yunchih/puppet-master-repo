@@ -1,6 +1,6 @@
 class ws::ssh {
 	package { 'openssh':
-		ensure => 'latest'
+		ensure => 'present'
 	}
 
 	service { 'sshd':

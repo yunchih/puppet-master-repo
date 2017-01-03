@@ -8,7 +8,7 @@ class ws::nscd {
 	}
 
 	package { $nscd_package:
-		ensure		=> 'latest'
+		ensure		=> 'present'
 	}
 	service { $nscd_service:
 		ensure		=> 'running',

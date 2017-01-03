@@ -6,7 +6,7 @@ class ws::tmp2 {
 	}
 
 	package { $quota_package:
-		ensure	=> 'latest'
+		ensure	=> 'present'
 	}
 
 }
