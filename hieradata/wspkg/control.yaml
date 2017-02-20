@@ -501,6 +501,7 @@ wspkg::pkgs:
  - watch
  - ibus_chewing
  - at
+ - shellcheck
 ## Video
  - xmms2
  - mplayer
