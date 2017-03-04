@@ -5,6 +5,7 @@ class ws::files {
 		'nicer.sh',
 		'sethome.sh',
 		'pacman-full-upgrade.sh',
+		'nfs-check.sh',
 	]
 
 	$root_scripts.each |$script| {
@@ -158,4 +159,20 @@ class ws::files {
 		onlyif	=> 'sh -c "grep -q vmem_max /etc/security/limits.d/wslab.conf"',
 	}
 
+	## write/wall/talk permission
+
+	file { '/usr/bin/write':
+		ensure => file,
+		mode => '0754'
+	}
+
+	file { '/usr/bin/wall':
+		ensure => file,
+		mode => '2754'
+	}
+
+	file { '/usr/bin/talk':
+		ensure => file,
+		mode => '2754'
+	}
 }
