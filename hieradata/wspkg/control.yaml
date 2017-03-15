@@ -388,6 +388,7 @@ wspkg::pkgs:
  - python_pandas
  - python_pyquery
  - python_nltk
+ - python_crypto
 ## Ruby
  - ruby
  - ruby_bundler

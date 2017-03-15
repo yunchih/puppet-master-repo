@@ -363,6 +363,7 @@ wspkg::map:
   python_pandas:            "python-pandas python2-pandas"
   python_pyquery:           "python-pyquery python2-pyquery"
   python_nltk:              "python-nltk python2-nltk"
+  python_crypto:            "python-crypto python2-crypto"
   ruby:                     "ruby"
   ruby_bundler:             "ruby-bundler"
   ruby_mysql:               ""
