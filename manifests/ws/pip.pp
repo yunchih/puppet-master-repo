@@ -11,7 +11,7 @@ class ws::pip {
 		notice( $pkg ) 
 		pip::install { $pkg:
 			package	=> $pkg,
-			ensure	=> 'latest',
+			ensure	=> 'present',
 		}
 	}
 }

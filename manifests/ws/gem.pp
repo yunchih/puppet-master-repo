@@ -7,7 +7,7 @@ class ws::gem {
 	$gems.each |$gem| { notice( $gem ) }
 
 	package { $gems: 
-		ensure => 'latest',
+		ensure => 'present',
 		provider => 'gem'
 	}
 }
