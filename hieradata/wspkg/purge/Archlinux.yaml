@@ -9,7 +9,6 @@ wspkg::purgelist:
   - vim			# conflict with `gvim`
   - gcc 		# conflict with `gcc-multilib`
   - gcc-libs 		# conflict with `gcc-libs-multilib`
-  - unrar		# conflict with `rar`
   - ruby-minitest	# conflict with `ruby`
   - haskell-fail # no longer available in official repo
   - haskell-regex-pcre-builtin # no longer available in official repo
