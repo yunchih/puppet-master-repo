@@ -4,8 +4,7 @@ class ws::files {
 	$root_scripts = [
 		'nicer.sh',
 		'sethome.sh',
-		'pacman-full-upgrade.sh',
-		'nfs-check.sh',
+		'pacman-full-upgrade.sh'
 	]
 
 	$root_scripts.each |$script| {
