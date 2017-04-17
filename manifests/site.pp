@@ -19,9 +19,9 @@ class monitor {
 class auth {
     include ws::ipsec
     include ws::ldap
-    include ws::nscd
+    include ws::sssd
 
-     Class['ws::ipsec'] -> Class['ws::ldap'] -> Class['ws::nscd']
+     Class['ws::ipsec'] -> Class['ws::sssd'] -> Class['ws::ldap']
 }
 
 class services {
