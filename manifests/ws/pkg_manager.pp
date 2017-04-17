@@ -10,6 +10,7 @@ class ws::pkg_manager {
 		}
 
 		class { 'pacman':
+			always_refresh 	=> false,
 			repositories	=> $repo,
 		}
 
