@@ -158,6 +158,16 @@ class ws::files {
 		onlyif	=> 'sh -c "grep -q vmem_max /etc/security/limits.d/wslab.conf"',
 	}
 
+	## sysctl.d/10-ptrace.conf
+	file { '/etc/sysctl.d/10-ptrace.conf':
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '0644',
+		source	=> "puppet:///$environment/217-base/etc/sysctl.d/10-ptrace.conf",
+		replace	=> false
+	}
+
 	## write/wall/talk permission
 
 	file { '/usr/bin/write':
