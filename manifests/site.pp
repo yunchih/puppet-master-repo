@@ -14,6 +14,7 @@ class home {
 class monitor {
     include ws::snmp
     include ws::munin
+    include ws::wsmon
 }
 
 class auth {
