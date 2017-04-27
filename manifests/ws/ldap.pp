@@ -7,9 +7,6 @@ class ws::ldap {
 		"Archlinux"	=> ['openldap', 'nss-pam-ldapd','python2-ldap', 'libpwquality', 'python2-smbpasswd'],
 		"FreeBSD"	=> ['openldap-client','nss-pam-ldapd']
 	}
-	$ldap_service = $::operatingsystem ? {
-		default	=> ['nslcd'],
-	}
 
 	package { $ldap_package:
 		ensure	=> 'present'
@@ -24,7 +21,7 @@ class ws::ldap {
 		source	=> "puppet:///$environment/217-base/etc/ldap"
 	}
 	
-	$ldap_files = ['/etc/pam_ldap.conf', '/etc/nsswitch.conf', '/etc/nslcd.conf', '/etc/pam.d/system-auth', '/etc/pam.d/su', '/etc/pam.d/su-l', '/etc/pam.d/passwd']
+	$ldap_files = ['/etc/pam_ldap.conf', '/etc/nsswitch.conf', '/etc/pam.d/system-auth', '/etc/pam.d/su', '/etc/pam.d/su-l', '/etc/pam.d/passwd']
 	$ldap_files.each |$file| { 
 		file { $file:
 			ensure	=> file,

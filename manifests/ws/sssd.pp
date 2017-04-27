@@ -9,7 +9,7 @@ class ws::sssd {
 	}
 
     file { '/etc/sssd/sssd.conf':
-        notify	=> [Service['sssd'], Service['nslcd']],
+        notify	=> [Service['sssd']],
         owner	=> 0,
         group	=> 0,
         mode	=> '0600',
