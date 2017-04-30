@@ -32,10 +32,4 @@ class ws::ldap {
 			source	=> "puppet:///$environment/217-base${file}"
 		}
 	}
-
-	service { $ldap_service:
-		ensure	=> 'running',
-        enable  => true
-	}
-
 }
