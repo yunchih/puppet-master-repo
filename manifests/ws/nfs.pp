@@ -23,7 +23,6 @@ class ws::nfs {
 		'auto.master.d/backup.autofs', 
 		'auto.master.d/ntucsp.autofs', 
 		'auto.master',
-		'auto.nfs',
 		'auto.backup'
 	]
 
@@ -35,6 +34,14 @@ class ws::nfs {
 			mode	=> '644',
 			source	=> "puppet:///$environment/217-base/etc/${auto}"
 		}
+	}
+
+	file { "/etc/autofs/auto.nfs":
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '755',
+		source	=> "puppet:///$environment/217-base/etc/auto.nfs"
 	}
 
 	service { $nfs_service:
