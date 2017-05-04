@@ -119,6 +119,16 @@ class ws::files {
 		replace	=> false
 	}
 
+	## default/grub
+	file { '/etc/default/grub':
+		ensure	=> file,
+		owner	=> '0',
+		group	=> '0',
+		mode	=> '0644',
+		source	=> "puppet:///$environment/217-base/etc/default/grub",
+		replace	=> true
+	}
+	
 	## write/wall/talk permission
 
 	file { '/usr/bin/write':
