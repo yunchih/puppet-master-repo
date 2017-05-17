@@ -36,14 +36,14 @@ class ws::nfs {
 		}
 	}
 
-	file { "/etc/autofs/auto.nfs":
-		ensure	=> file,
-		owner	=> '0',
-		group	=> '0',
-		mode	=> '755',
-		source	=> "puppet:///$environment/217-base/etc/auto.nfs"
-	}
-
+ 	file { "/etc/autofs/auto.nfs":
+ 		ensure	=> file,
+ 		owner	=> '0',
+ 		group	=> '0',
+ 		mode	=> '755',
+ 		source	=> "puppet:///$environment/217-base/etc/auto.nfs"
+ 	}
+ 
 	service { $nfs_service:
 		ensure	=> 'running',
         enable  => true
