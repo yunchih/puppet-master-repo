@@ -6,7 +6,7 @@ class ws::files {
 		'sethome.sh',
 		'pacman-full-upgrade.sh',
 		'nfs-check.sh',
-		'nfs-temp-create.sh'
+		'nfs-temp-create.py'
 	]
 
 	$root_scripts.each |$script| {
