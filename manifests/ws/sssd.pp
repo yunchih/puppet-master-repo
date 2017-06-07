@@ -16,4 +16,11 @@ class ws::sssd {
 		source	=> "puppet:///$environment/217-base/etc/sssd/sssd.conf"
     }
 
+    file { "/etc/logrotate.d/sssd":
+        ensure	=> file,
+        owner	=> '0',
+        group	=> '0',
+        mode	=> '644',
+        source	=> "puppet:///$environment/217-base/etc/logrotate.d/sssd"
+    }
 }
