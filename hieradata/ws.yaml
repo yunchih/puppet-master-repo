@@ -14,10 +14,5 @@ ws::matlab::license_server:
 
 ws::arch::aur:
     name: 'aur'
-    server: 'http://repo.sa/archrepo/'
-    sig_level: 'Never'
-
-ws::arch::meta:
-    name: 'wsarch'
-    server: 'http://wslab.csie.ntu.edu.tw/repos/'
+    server: 'http://repo.sa.csie.ntu.edu.tw/archrepo/'
     sig_level: 'Never'
