@@ -15,6 +15,8 @@ class monitor {
     include ws::snmp
     include ws::munin
     include ws::wsmon
+
+    Class["ws::snmp"] -> Class["ws::sssd"]
 }
 
 class auth {
