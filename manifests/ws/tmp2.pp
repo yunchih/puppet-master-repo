@@ -9,4 +9,11 @@ class ws::tmp2 {
 		ensure	=> 'present'
 	}
 
+    file { "/tmp2":
+        ensure	=> directory,
+        owner	=> '0',
+        group	=> '0',
+        mode	=> '1777'
+    }
+
 }
