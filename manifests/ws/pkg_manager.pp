@@ -22,13 +22,6 @@ class ws::pkg_manager {
 		    order	=> 50,
 		}
 
-		$wsarch = hiera("ws::arch::meta")
-		pacman::repo { $wsarch['name']:
-		    server	=> $wsarch['server'],
-		    sig_level	=> $wsarch['sig_level'],
-		    order	=> 60,
-		}
-        
 		file { '/etc/pacman.d/mirrorlist':
 			ensure	=> file,
 			source	=> "puppet:///$environment/217-base/etc/pacman.d/mirrorlist"
