@@ -42,6 +42,13 @@ class ws::mail {
 		source	=> "puppet:///$environment/217-base/etc/mail/ssl/exim.pem"
 	}
 
+    # workaround /bin/mail error message since s-nail 14.9.0-1
+    file_line { 'mailrc':
+        ensure => present,
+        path   => '/etc/mail.rc', line   => 'unset emptystart',
+        match  => '^set\ emptystart',
+    }
+
 	service { $exim_service:
 		ensure	=> 'running'
 	}
