@@ -8,7 +8,7 @@ class home {
     include ws::createhome
     include ws::nfs
 
-    Class['ws::nfs'] -> Class['ws::createhome']
+    Class['ws::createhome'] -> Class['ws::nfs']
 }
 
 class monitor {
@@ -16,7 +16,7 @@ class monitor {
     include ws::munin
     include ws::wsmon
 
-    Class["ws::snmp"] -> Class["ws::sssd"]
+    Class["ws::sssd"] -> Class["ws::snmp"]
 }
 
 class auth {
