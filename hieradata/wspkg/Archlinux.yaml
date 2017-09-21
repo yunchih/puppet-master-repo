@@ -296,7 +296,6 @@ wspkg::map:
   gnutls_cli:               "gnutls"
   pcmanx:                   "pcmanx-gtk2"
   loudmouth:                "loudmouth"
-  nx:                       "nx-all"
   netcat:                   "gnu-netcat"
   traceroute:               "traceroute"
   proxychains-ng:           "proxychains-ng"
