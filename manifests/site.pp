@@ -50,6 +50,7 @@ class utilities {
     include ws::cron
     include ws::tmp2
     include ws::sudo
+    include ws::polkit
 }
 
 class packages {
