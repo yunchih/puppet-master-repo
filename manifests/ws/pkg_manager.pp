@@ -15,11 +15,14 @@ class ws::pkg_manager {
 		}
 
 
-		$aur = hiera("ws::arch::aur")
-		pacman::repo { $aur['name']:
-		    server	=> $aur['server'],
-		    sig_level	=> $aur['sig_level'],
-		    order	=> 50,
+		$custom_repos = [ "ws::arch::aur", "ws::arch::wsarch" ]
+		$custom_repos.each |$r| {
+			$aur = hiera($r)
+			pacman::repo { $aur['name']:
+			    server	=> $aur['server'],
+			    sig_level	=> $aur['sig_level'],
+			    order	=> $aur['order'],
+			}
 		}
 
 		file { '/etc/pacman.d/mirrorlist':

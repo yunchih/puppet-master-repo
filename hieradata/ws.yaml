@@ -16,3 +16,10 @@ ws::arch::aur:
     name: 'aur'
     server: 'http://repo.sa.csie.ntu.edu.tw/archrepo/'
     sig_level: 'Never'
+    order: 60
+
+ws::arch::wsarch:
+    name: 'wsarch'
+    server: 'http://repo.sa.csie.ntu.edu.tw/wsarch/'
+    sig_level: 'Never'
+    order: 50
