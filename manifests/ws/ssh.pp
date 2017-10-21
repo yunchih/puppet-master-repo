@@ -28,4 +28,25 @@ class ws::ssh {
         content  => $sshd_config
     }
 
+    file { "/etc/systemd/system/sshd.service.d/":
+	ensure	=> directory,
+	owner	=> '0',
+	group	=> '0',
+	mode	=> '0755',
+	source	=> "puppet:///$environment/217-base/etc/systemd/system/sshd.service.d/"
+    }
+    file { "/etc/systemd/system/sshd.service.d/10-CPUWeight.conf":
+	ensure	=> file,
+	owner	=> '0',
+	group	=> '0',
+	mode	=> '0644',
+	source	=> "puppet:///$environment/217-base/etc/systemd/system/sshd.service.d/10-CPUWeight.conf"
+    }
+    file { "/etc/systemd/system/sshd.service.d/50-MemoryLow.conf":
+	ensure	=> file,
+	owner	=> '0',
+	group	=> '0',
+	mode	=> '0644',
+	source	=> "puppet:///$environment/217-base/etc/systemd/system/sshd.service.d/50-MemoryLow.conf"
+    }
 }
