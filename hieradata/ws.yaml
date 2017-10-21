@@ -12,6 +12,11 @@ ws::matlab::license_server:
     - "linux0.sa"
     - "linux9.sa"
 
+ws::resrc::oasis:
+    - "oasis1.sa"
+    - "oasis2.sa"
+    - "oasis3.sa"
+
 ws::arch::aur:
     name: 'aur'
     server: 'http://repo.sa.csie.ntu.edu.tw/archrepo/'

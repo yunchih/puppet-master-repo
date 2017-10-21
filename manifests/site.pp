@@ -30,6 +30,7 @@ class auth {
 class services {
     include ws::ssh
     include ws::mail
+    include ws::resrc
     include ws::cups
     include ws::systemd
     include home
