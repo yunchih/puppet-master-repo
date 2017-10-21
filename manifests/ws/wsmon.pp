@@ -3,7 +3,9 @@ class ws::wsmon {
 
 	$wsmon_directories = [
 		'/root/wsmon',
-		'/root/wsmon/tmp2mon'
+		'/root/wsmon/tmp2mon',
+		'/run/wslab/',
+		'/run/wslab/snmp'
 	]
 
 	$wsmon_directories.each |$dir| {
