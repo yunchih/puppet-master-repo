@@ -30,6 +30,10 @@ class ws::pkg_manager {
 			source	=> "puppet:///$environment/217-base/etc/pacman.d/mirrorlist"
 		}
 
+        package { 'pkg-manager-oops':
+            ensure	=> 'present'
+        }
+
 	}
 }
 
