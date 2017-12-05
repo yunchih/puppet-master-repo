@@ -46,7 +46,7 @@ class ws::cups {
 		file { $file:
 			ensure	=> file,
 			replace	=> 'no',
-			notify  => Service[$cups_service],
+			notify  => Service[$cups_server_service],
 			mode	=> '0600',
 			source	=> "puppet:///$environment/217-base${file}"
 		}

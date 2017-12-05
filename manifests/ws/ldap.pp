@@ -25,7 +25,6 @@ class ws::ldap {
 	$ldap_files.each |$file| { 
 		file { $file:
 			ensure	=> file,
-            notify  => Service[$ldap_service],
 			owner	=> '0',
 			group	=> '0',
 			mode	=> '644',

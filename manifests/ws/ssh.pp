@@ -15,6 +15,8 @@ class ws::ssh {
     $source = "${fbase}/${environment}/217-base/etc/ssh/sshd_config"
     if $trusted['certname'] in $extra_ports_servers  {
         $extra_ports = join($extra_ports_list.map |$p| { "Port ${p}" }, "\n")
+    } else {
+        $extra_ports = ""
     }
 
     $ban_list = join(hiera("ws::ssh::ban_list")," ")
