@@ -70,7 +70,7 @@ wspkg::map:
   tcl:                      "tcl tcl85"
   tk:                       "tk tk85"
   aarch64_gcc:              "aarch64-linux-gnu-gcc"
-  gdb_multiarch:            ""
+  gdb_multiarch:            "aarch64-linux-gnu-gdb"
   eclipse:                  "eclipse-java eclipse-pydev"  ## `eclipse-linuxtools` dependency: `eclipse-cpp` conflict with `eclipse-java`
   jikes:                    ""
   biojava:                  "biojava"
