@@ -1,0 +1,16 @@
+version: 5
+defaults:
+        datadir: data
+        data_hash: yaml_data
+hierarchy:
+        - name: "all the data"
+          paths: 
+                - "ws.yaml"
+                - "banlist.yaml"
+                - "config.yaml"
+                - "os/Archlinux.yaml"
+                - "wspkg/Archlinux.yaml"
+                - "wspkg/control.yaml"
+                - "wspkg/gem.yaml"
+                - "wspkg/pip.yaml"
+                - "wspkg/purge/Archlinux.yaml"
