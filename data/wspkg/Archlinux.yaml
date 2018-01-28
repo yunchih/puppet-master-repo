@@ -39,7 +39,7 @@ wspkg::map:
   cpufreq:                  ""
   cups:                     "cups cups-filters python-pycups python2-pycups"
   iotop:                    "iotop"
-  mcelog:                   "mcelog"
+  mcelog:                   "rasdaemon"
   menu:                     ""
   munin:                    "munin-node"
   parted:                   "parted"

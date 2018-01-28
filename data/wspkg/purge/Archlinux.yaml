@@ -7,7 +7,6 @@ wspkg::purgelist:
   - mtr			# conflict with `mtr-gtk`
   - cdrkit		# conflict with `cdrtools`
   - vim			# conflict with `gvim`
-  - gcc 		# conflict with `gcc-multilib`
   - ruby-minitest	# conflict with `ruby`
   - haskell-fail # no longer available in official repo
   - haskell-regex-pcre-builtin # no longer available in official repo
