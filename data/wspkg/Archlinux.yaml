@@ -63,7 +63,7 @@ wspkg::map:
   git:                      "git gitg"
   indent:                   "indent"
   make:                     "make bmake"
-  mingw:                    "mingw-w64-gcc"
+  mingw:                    "mingw-w64-binutils mingw-w64-crt mingw-w64-gcc mingw-w64-headers mingw-w64-winpthreads"
   nodejs:                   "nodejs npm"
   openjdk:                  "jdk7-openjdk openjdk7-src jdk8-openjdk openjdk8-src"
   subversion:               "subversion emacs-psvn"
