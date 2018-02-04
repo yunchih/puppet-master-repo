@@ -113,6 +113,7 @@ wspkg::pkgs:
  - llvm
  - opencl
  - pocl
+ - meson
 ## Doc
  - libc_doc
  - make_doc
@@ -214,6 +215,7 @@ wspkg::pkgs:
 # - adwaita_qt  Cannot be built
  - qt4_qtconfig
  - qt5_qtct
+ - kdiff3
 ## Library
  - libc_dev
  - libevent_dev
@@ -281,6 +283,7 @@ wspkg::pkgs:
  - screen
  - tmux
  - protobuf
+ - cloc
  - linuxtool
 ## Networking
  - denyhosts
@@ -308,6 +311,7 @@ wspkg::pkgs:
  - rrdtool
  - tcptraceroute
  - urlview
+ - weechat
  - x11vnc
  - ldapvi
  - bsdftpd_ssl
@@ -317,6 +321,7 @@ wspkg::pkgs:
  - xspice
  - gnutls_cli
  - pcmanx
+ - sshfs
  - loudmouth
  - netcat
  - traceroute
@@ -425,6 +430,7 @@ wspkg::pkgs:
  - pstotext
  - wv
  - asciidoc
+ - asciidoctor
  - aspell_en
  - gs_cjk_resource
  - spell
@@ -434,6 +440,7 @@ wspkg::pkgs:
  - xpdf_zh_fonts
  - markdown
  - pandoc
+ - dblatex
 ## Utilities
  - fakeroot
  - geeqie
@@ -502,6 +509,10 @@ wspkg::pkgs:
  - ibus_chewing
  - at
  - shellcheck
+ - ack
+ - ripgrep
+ - silver_searcher
+ - jq
 ## Video
  - xmms2
  - mplayer
