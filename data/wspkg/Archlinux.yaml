@@ -551,3 +551,4 @@ wspkg::map:
   chkrootkit:               "chkrootkit"
   nsca:                     "nsca"
   resrc:                    "python-resrc"
+  pkg-manager-oops:         "pkg-manager-oops"
