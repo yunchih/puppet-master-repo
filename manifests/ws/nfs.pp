@@ -49,35 +49,6 @@ class ws::nfs {
         enable  => true
 	}
 
-	$base_links = ['bebi','course','dept','faculty']	
-
-	$base_links.each |$link| { 
-		file { "/home/${link}":
-			ensure	=> link,
-			target	=> "/nfs/${link}"
-		}
-	}
-
-	$links = {
-		"student"	=> "undergrad",
-		"master"	=> "master",
-		"phd"		=> "phd",
-		"inm/master"	=> "inm_master",
-		"inm/phd"	=> "inm_phd"
-	}
-
-	$years = ['00','01','02','03','04']
-
-	$links.each |$link| { 
-		$from = $link[0]
-		$to   = $link[1]	
-		$years.each |$year| { 
-			file { "/home/${from}/${year}":
-				ensure	=> link,
-				target	=> "/nfs/${to}/${year}"
-			}
-		}
-	}
 }
 
 
