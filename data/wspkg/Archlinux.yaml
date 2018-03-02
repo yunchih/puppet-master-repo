@@ -237,7 +237,7 @@ wspkg::map:
   weka:                     "weka"
   libsvm:                   "libsvm"
   liblinear:                "liblinear"
-  libopenblas:              "openblas-lapack"
+  libopenblas:              "libopenblas"
   mailx:                    "s-nail"
   vm:                       "vm-bzr"
   alpine:                   "alpine"
