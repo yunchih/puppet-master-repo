@@ -1,7 +1,6 @@
 ---
 wspkg::purgelist:
   - discount		# conflict with `markdown`
-  - blas		# conflict with `openblas`, `atlas-lapsack-base`	
   - dos2unix		# conflict with `tofrodos`
   - python2-pillow	# conflict with `python2-imaging`
   - mtr			# conflict with `mtr-gtk`

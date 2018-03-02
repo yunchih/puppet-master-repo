@@ -253,8 +253,8 @@ wspkg::map:
   qhull:                    "qhull"
   r_base:                   "r"
   sympy:                    "python-sympy python2-sympy"
+  blas:                     "blas"
   lapacke:                  ""  ## `atlas-lapsack` conflicts with `openblas`
-  big5width:                ""
   gnupg:                    "gnupg"
   kernel_package:           ""
   xsltproc:                 "libxslt"

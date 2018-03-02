@@ -275,7 +275,7 @@ wspkg::pkgs:
  - r_base
  - sympy
  - lapacke
- - big5width
+ - blas
  - gnupg
  - kernel_package
  - xsltproc
