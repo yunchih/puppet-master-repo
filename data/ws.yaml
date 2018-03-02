@@ -8,10 +8,6 @@ ws::ssh::extra_ports:
     - 80
     - 443
 
-ws::matlab::license_server:
-    - "linux0.sa"
-    - "linux9.sa"
-
 ws::resrc::oasis:
     - "oasis1.sa"
     - "oasis2.sa"
