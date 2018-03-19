@@ -4,7 +4,7 @@ class ws::ldap {
 	
 	
 	$ldap_package = $::operatingsystem ? {
-		"Archlinux"	=> ['python2-ldap', 'libpwquality', 'python2-smbpasswd'],
+		"Archlinux"	=> ['python2-ldap', 'libpwquality'],
 		"FreeBSD"	=> ['openldap-client','nss-pam-ldapd']
 	}
 
