@@ -371,7 +371,7 @@ wspkg::map:
   ruby:                     "ruby"
   ruby_bundler:             "ruby-bundler"
   ruby_mysql:               ""
-  ruby_rake:                "ruby"
+  ruby_rake:                "ruby-rake"
   ruby_rails:               "ruby-rails"
   blast2:                   "blast+"
   blitz:                    "blitz-cppqed-hg"
