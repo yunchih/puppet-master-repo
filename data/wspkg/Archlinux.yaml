@@ -119,7 +119,7 @@ wspkg::map:
   gcc_doc:                  "gcc-docs libstdc++-doc"
   ctags:                    "ctags"
   emacs:                    "emacs emacs-python-mode vm-bzr"
-  libreoffice:              "libreoffice-fresh libreoffice-fresh-sdk libreoffice-fresh-zh-TW"
+  libreoffice:              "libreoffice-fresh libreoffice-fresh-sdk libreoffice-fresh-zh-tw"
   vim_gtk:                  "gvim"
   joe:                      "joe"
   cscope:                   "cscope"
