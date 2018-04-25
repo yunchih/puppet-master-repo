@@ -5,7 +5,7 @@ class ws::nfs {
 		default			=> 'nfs-common'
 	}
 	$nfs_service = $::operatingsystem ? {
-		"Archlinux"	=> ['rpcbind.service','nfs-client.target','remote-fs.target', 'autofs'],
+		"Archlinux"	=> ['nfs-client.target','remote-fs.target', 'autofs.service'],
 		"FreeBSD"	=> ['nfsclient']
 	}
 	package { $nfs_package:
